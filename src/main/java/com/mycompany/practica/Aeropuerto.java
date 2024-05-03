@@ -27,6 +27,7 @@ public class Aeropuerto {
     Listas  avionesHangar;
     Listas areaEstac;
     ListaPuertas puertasEmb;
+    Listas areaRod;
     //semaforos
     public Semaphore puertaEmbarqueExclusiva;
     public Semaphore puertaDesembarqueExclusiva;
@@ -37,11 +38,12 @@ public class Aeropuerto {
     private Lock leer = lock.readLock();
     private Lock escribir = lock.writeLock();
     
-    public Aeropuerto(JTextField h, JTextField ArEst, JTextField pt1, JTextField pt2, JTextField pt3, JTextField pt4, JTextField pt5, JTextField pt6){
+    public Aeropuerto(JTextField h, JTextField ArEst, JTextField pt1, JTextField pt2, JTextField pt3, JTextField pt4, JTextField pt5, JTextField pt6, JTextField areaR){
         numPersonas = 3000;
         avionesHangar = new Listas(h);
         areaEstac = new Listas(ArEst);
         puertasEmb = new ListaPuertas(pt1, pt2, pt3, pt4, pt5, pt6);
+        areaRod = new Listas(areaR);
         puertaEmbarqueExclusiva = new Semaphore(1);
         puertaDesembarqueExclusiva = new Semaphore(1);
         puertaEmbarque = new Semaphore(4);
@@ -142,6 +144,15 @@ public class Aeropuerto {
             num = numPersonas;
         }finally { leer.unlock();}
         return num;
+    }
+    
+    //Area de Rodaje
+    public void AvionEnAreaRodaje(Avion av){
+        areaRod.meter(av);
+    }
+    
+    public void AvionSalirAreaRod(Avion av){
+        areaRod.sacar(av);
     }
     
 }
