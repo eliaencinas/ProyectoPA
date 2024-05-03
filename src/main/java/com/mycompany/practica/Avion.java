@@ -8,7 +8,7 @@ import java.util.Random;
 
 /**
  *
- * @author elia3
+ * @author elia y noelia
  */
 public class Avion extends Thread{
     //atributos
@@ -98,7 +98,7 @@ public class Avion extends Thread{
            aeropuerto.SalirAreaEstac(this);
            
            aeropuerto.solicitarPuertaEmbarque(this);
-           sleep(700);
+           sleep(800);
            aeropuerto.solicitarPuertaDesembarque(this);
            
            

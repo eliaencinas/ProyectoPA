@@ -8,7 +8,7 @@ import java.util.Random;
 
 /**
  *
- * @author elia3
+ * @author elia y noelia
  */
 public class Autobus extends Thread{
     private String id;

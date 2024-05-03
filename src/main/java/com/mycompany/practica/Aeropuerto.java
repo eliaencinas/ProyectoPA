@@ -14,31 +14,34 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author elia3
+ * @author elia y noelia
  */
 public class Aeropuerto {
     // atributos
     private int numPersonas;
     //Array
-    ArrayList<Avion> listaPuertaEmbarque;
+    ArrayList<String> listaPuertaEmbarque;
     //Random 
     Random rand = new Random();
     // Listas
     Listas  avionesHangar;
     Listas areaEstac;
+    ListaPuertas puertasEmb;
     //semaforos
     public Semaphore puertaEmbarqueExclusiva;
     public Semaphore puertaDesembarqueExclusiva;
     public Semaphore puertaEmbarque;
+    public Semaphore meterEnLista = new Semaphore(1);
     //Locks
     private ReadWriteLock lock = new ReentrantReadWriteLock();
     private Lock leer = lock.readLock();
     private Lock escribir = lock.writeLock();
     
-    public Aeropuerto(JTextField h, JTextField ArEst){
-        numPersonas = 300;
+    public Aeropuerto(JTextField h, JTextField ArEst, JTextField pt1, JTextField pt2, JTextField pt3, JTextField pt4, JTextField pt5, JTextField pt6){
+        numPersonas = 3000;
         avionesHangar = new Listas(h);
         areaEstac = new Listas(ArEst);
+        puertasEmb = new ListaPuertas(pt1, pt2, pt3, pt4, pt5, pt6);
         puertaEmbarqueExclusiva = new Semaphore(1);
         puertaDesembarqueExclusiva = new Semaphore(1);
         puertaEmbarque = new Semaphore(4);
@@ -69,11 +72,21 @@ public class Aeropuerto {
         try{
             if(puertaEmbarque.availablePermits() == 0 && puertaEmbarqueExclusiva.availablePermits() == 1){
                 puertaEmbarqueExclusiva.acquire();
+                meterEnLista.acquire();
+                puertasEmb.meter(av, true);
+                meterEnLista.release();
                 av.embarcar();
+                puertasEmb.sacar(av, true);
+                //meterEnLista.release();
                 puertaEmbarqueExclusiva.release();
             }else{
                 puertaEmbarque.acquire();
+                meterEnLista.acquire();
+                puertasEmb.meter(av, true);
+                meterEnLista.release();
                 av.embarcar();
+                puertasEmb.sacar(av, true);
+                //meterEnLista.release();
                 puertaEmbarque.release();
             }
         }catch (InterruptedException e){}
@@ -83,15 +96,27 @@ public class Aeropuerto {
         try{
             if(puertaEmbarque.availablePermits() == 0 && puertaDesembarqueExclusiva.availablePermits() == 1){
                 puertaDesembarqueExclusiva.acquire();
+                meterEnLista.acquire();
+                puertasEmb.meter(av, false);
+                meterEnLista.release();
                 av.desembarcar();
+                
+                puertasEmb.sacar(av, false);
+                
                 puertaDesembarqueExclusiva.release();
             }else{
                 puertaEmbarque.acquire();
+                meterEnLista.acquire();
+                puertasEmb.meter(av, false);
+                meterEnLista.release();
                 av.desembarcar();
+                puertasEmb.sacar(av, false);
+                //meterEnLista.release();
                 puertaEmbarque.release();
             }
         }catch (InterruptedException e){}
     }
+    
     
     //gestion de personas
     public void Entrar(int personas){

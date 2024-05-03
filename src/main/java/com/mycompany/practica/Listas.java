@@ -9,7 +9,7 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author elia3
+ * @author elia y noelia
  */
 public class Listas {
     ArrayList<Thread> lista;
