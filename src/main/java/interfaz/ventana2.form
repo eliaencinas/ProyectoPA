@@ -24,44 +24,215 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="168" max="-2" attributes="0"/>
-              <Component id="jLabel3" min="-2" pref="48" max="-2" attributes="0"/>
-              <EmptySpace min="178" pref="535" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
+              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="207" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jTextHangarB" min="-2" pref="292" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jTextAreaEstcB" min="-2" pref="299" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="150" pref="150" max="-2" attributes="0"/>
-                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="159" max="-2" attributes="0"/>
-                      </Group>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="LabelAMB" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jLabel2" alignment="1" min="-2" pref="54" max="-2" attributes="0"/>
-                          <Component id="jLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="LabelPasajerosM" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="jTextPasajerosM" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="LabelP1M" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jTextP1M" min="-2" pref="101" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="LabelARM" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jTextARM" min="-2" pref="264" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="LabelAEM" alignment="0" min="-2" pref="54" max="-2" attributes="0"/>
+                                          <Component id="LabelPE1M" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="LabelPE2M" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="LabelPE3M" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="LabelHangarM" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jTextHangarM" min="-2" pref="292" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="jTextAreaEstcM" pref="292" max="32767" attributes="0"/>
+                                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                                  <Component id="jTextPE2M" alignment="1" min="-2" pref="113" max="-2" attributes="0"/>
+                                                  <Component id="jTextPE1M" min="-2" pref="113" max="-2" attributes="0"/>
+                                                  <Component id="jTextPE3M" alignment="1" min="-2" pref="113" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Component id="jTextTallerM" alignment="0" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="LabelTCM" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jTextTCM" min="-2" pref="111" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="LabelTAM" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jTextTAM" min="-2" pref="102" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="LabelTallerM" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                              <Component id="jTextAMB" alignment="1" min="-2" pref="364" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="LAbelP2M" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="jTextP2M" min="-2" pref="101" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="LabelP4M" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="-2" pref="191" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="LabelPE4M" min="-2" max="-2" attributes="0"/>
+                                              <Component id="LabelPE5M" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="LabelPE6M" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="LabelP3M" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jTextPE4M" max="32767" attributes="0"/>
+                                      <Component id="jTextPE5M" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jTextPE6M" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jTextP3M" alignment="0" pref="109" max="32767" attributes="0"/>
+                                      <Component id="jTextP4M" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jTextHangarM" max="32767" attributes="0"/>
-                          <Component id="jTextAreaEstcM" min="-2" pref="292" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="LabelPasajerosB" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jTextPasajerosB" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="jTextABM" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="jTextHangarB" min="-2" pref="292" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="LabelTallerB" min="-2" pref="37" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                                                  <Component id="jTextTallerB" max="32767" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" attributes="0">
+                                                  <Group type="103" groupAlignment="1" attributes="0">
+                                                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="LabelPE1M1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="LabelPE2M1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="LabelPE3M1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jTextAreaEstcB" alignment="0" min="-2" pref="315" max="-2" attributes="0"/>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="jTextPE2B" min="-2" pref="113" max="-2" attributes="0"/>
+                                                          <EmptySpace min="-2" pref="198" max="-2" attributes="0"/>
+                                                          <Component id="jTextPE5B" min="-2" pref="109" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="jTextPE3B" min="-2" pref="113" max="-2" attributes="0"/>
+                                                          <EmptySpace min="-2" pref="198" max="-2" attributes="0"/>
+                                                          <Component id="jTextPE6B" min="-2" pref="109" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="jTextPE1B" min="-2" pref="113" max="-2" attributes="0"/>
+                                                          <EmptySpace min="-2" pref="198" max="-2" attributes="0"/>
+                                                          <Component id="jTextPE4B" min="-2" pref="109" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="LabelARM1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="jTextARB" min="-2" pref="223" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="LAbelP2M1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="LabelP1M1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="102" attributes="0">
+                                                          <Group type="103" groupAlignment="0" attributes="0">
+                                                              <Group type="102" attributes="0">
+                                                                  <EmptySpace max="32767" attributes="0"/>
+                                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                                      <Component id="LabelP3M1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                                      <Component id="LabelPE4M1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                                      <Component id="LabelPE5M1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                                      <Component id="LabelPE6M1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                                  </Group>
+                                                              </Group>
+                                                              <Group type="102" alignment="1" attributes="0">
+                                                                  <Component id="jTextP2B" min="-2" pref="202" max="-2" attributes="0"/>
+                                                                  <EmptySpace max="32767" attributes="0"/>
+                                                                  <Component id="LabelP4M1" min="-2" max="-2" attributes="0"/>
+                                                              </Group>
+                                                          </Group>
+                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                              <Component id="jTextP3B" alignment="0" max="32767" attributes="0"/>
+                                                              <Component id="jTextP4B" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
+                                                          </Group>
+                                                      </Group>
+                                                      <Component id="jTextP1B" min="-2" pref="202" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                          <Component id="LabelABM" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                              <Component id="LabelTCB" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jTextTCB" max="32767" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="LabelTAB" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jTextTAB" min="-2" pref="71" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -69,30 +240,122 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LabelTCM" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelTAM" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextTCM" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextTAM" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelTCB" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelTAB" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextTCB" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextTAB" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="26" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LabelPasajerosM" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextPasajerosM" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelPasajerosB" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextPasajerosB" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelHangarM" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jTextHangarM" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextAreaEstcM" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jTextHangarB" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LabelTallerM" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextTallerM" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelTallerB" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextTallerB" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LabelAEM" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextAreaEstcM" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jTextAreaEstcB" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="152" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LabelPE1M" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextPE1M" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelPE4M" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextPE4M" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelPE1M1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextPE1B" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelPE4M1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextPE4B" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LabelPE2M" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextPE2M" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelPE5M" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextPE5M" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelPE2M1" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextPE2B" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelPE5M1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextPE5B" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LabelPE3M" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextPE3M" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelPE6M" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextPE6M" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelPE3M1" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextPE3B" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelPE6M1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextPE6B" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LabelARM" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextARM" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelARM1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextARB" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LabelP1M" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelP3M" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextP1M" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextP3M" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelP1M1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextP1B" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelP3M1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextP3B" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="28" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LAbelP2M" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelP4M" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextP2M" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextP4M" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LAbelP2M1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelP4M1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextP4B" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextP2B" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LabelAMB" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelABM" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jTextAMB" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextABM" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -103,12 +366,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextHangarMActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="LabelHangarM">
       <Properties>
         <Property name="text" type="java.lang.String" value="Hangar:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="LabelAEM">
       <Properties>
         <Property name="text" type="java.lang.String" value="Area Estc:"/>
       </Properties>
@@ -120,12 +383,12 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Madrid"/>
+        <Property name="text" type="java.lang.String" value="Aeropuerto Madrid"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Barcelona"/>
+        <Property name="text" type="java.lang.String" value="Aeropuerto Barcelona"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
@@ -144,6 +407,233 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextAreaEstcB">
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelTCM">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Transfers Ciudad"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelTallerM">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Taller"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelPasajerosM">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="N&#xba; Pasajeros en Aeropuerto "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelTAM">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Transfers Aeropuerto"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelARM">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Area de Rodaje"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelPE1M">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Puerta 1:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelPE2M">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Puerta 2:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelPE3M">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Puerta 3:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelPE4M">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Puerta 4:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelPE6M">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Puerta 6:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelPE5M">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Puerta 5:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelP1M">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Pista 1:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LAbelP2M">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Pista 2:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelP3M">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Pista 3:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelP4M">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Pista 4:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextTCM">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextTCMActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextTAM">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextPasajerosM">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextTallerM">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextPE1M">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextPE2M">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextPE3M">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextPE4M">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextPE5M">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextPE6M">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextARM">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextP1M">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextP2M">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextP3M">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextP4M">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextTallerB">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextPE1B">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextPE2B">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextPE3B">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextPE4B">
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelTallerB">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Taller"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextPE5B">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextPE6B">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextARB">
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelARM1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Area de Rodaje"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextP1B">
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelPE1M1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Puerta 1:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelPE2M1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Puerta 2:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelPE3M1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Puerta 3:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelPE4M1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Puerta 4:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelPE6M1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Puerta 6:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelPE5M1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Puerta 5:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelP1M1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Pista 1:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LAbelP2M1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Pista 2:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelP3M1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Pista 3:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelP4M1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Pista 4:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextP2B">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextP3B">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextP4B">
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelPasajerosB">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="N&#xba; Pasajeros en Aeropuerto"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextPasajerosB">
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelTCB">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Transfers Ciudad"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelTAB">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Transfers Aeropuerto"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextTCB">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextTAB">
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelAMB">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Aerovia Madrid-Barcelona"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelABM">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Aerovia Barcelona-Madrid"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextAMB">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextABM">
     </Component>
   </SubComponents>
 </Form>
