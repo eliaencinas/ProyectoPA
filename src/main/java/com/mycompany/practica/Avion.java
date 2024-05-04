@@ -124,7 +124,9 @@ public class Avion extends Thread{
              aeropuerto.solicitarPistaDespegue(this);
              aeropuerto.meterEnAerovia(this);
              aeropuerto.solicitarPistaAterrizaje(this);
-             aeropuerto.solicitarPuertaDesembarque(this);  
+             aeropuerto.solicitarPuertaDesembarque(this);
+             aeropuerto.solicitarTaller(this);
+             numVuelos ++;
            }
            
            
@@ -147,5 +149,13 @@ public class Avion extends Thread{
         return capacidadMaxima;
     }
     
-    
+    public void inspeccionar() throws InterruptedException{
+        aeropuerto.solicitarTaller(this);
+        if(numVuelos % 15 == 0){
+            sleep(5000 + rand.nextInt(6000));
+            numVuelos = 0;
+        }else{
+            sleep(1000 + rand.nextInt(6000));
+        }
+    }
 }

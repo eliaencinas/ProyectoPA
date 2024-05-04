@@ -24,7 +24,7 @@ public class Aeropuerto {
     //Random 
     Random rand = new Random();
     // Listas
-    Listas  avionesHangar, areaEstac, areaRod,aerovia, busCiudad, busAeropuerto;
+    Listas  avionesHangar, areaEstac, areaRod,aerovia, busCiudad, busAeropuerto,avTaller;
     ListaPuertas puertasEmb;
     ListasPistas pistas;
     //semaforos
@@ -32,13 +32,15 @@ public class Aeropuerto {
     public Semaphore puertaDesembarqueExclusiva;
     public Semaphore puertaEmbarque;
     public Semaphore meterEnLista = new Semaphore(1);
+    public Semaphore sTaller = new Semaphore(20,true);
+    public Semaphore sInspeccion = new Semaphore(1,true);
     //Locks
     private ReadWriteLock lock = new ReentrantReadWriteLock();
     private Lock leer = lock.readLock();
     private Lock escribir = lock.writeLock();
     JTextField nP;
     
-    public Aeropuerto(JTextField bC, JTextField bA,JTextField numP,JTextField h, JTextField ArEst, JTextField pt1, JTextField pt2, JTextField pt3, JTextField pt4, JTextField pt5, JTextField pt6, JTextField areaR, JTextField pista1, JTextField pista2, JTextField pista3, JTextField pista4, JTextField aero){
+    public Aeropuerto(JTextField bC, JTextField bA,JTextField numP,JTextField h, JTextField ArEst, JTextField pt1, JTextField pt2, JTextField pt3, JTextField pt4, JTextField pt5, JTextField pt6, JTextField areaR, JTextField pista1, JTextField pista2, JTextField pista3, JTextField pista4, JTextField aero,JTextField taller){
         nP = numP;
         numPersonas = 0;
         avionesHangar = new Listas(h);
@@ -53,6 +55,7 @@ public class Aeropuerto {
         aerovia = new Listas(aero);
         busCiudad = new Listas(bC);
         busAeropuerto = new Listas(bA);
+        avTaller = new Listas(taller);
     }
     
     
@@ -204,4 +207,26 @@ public class Aeropuerto {
         busAeropuerto.meter(bus);
     }
     
+    public void solicitarTaller(Avion av) throws InterruptedException{
+        try{
+            avTaller.meter(av);
+            sTaller.acquire();
+            Thread.sleep(1000);
+            realizarInspeccion(av);
+            avTaller.sacar(av);
+            sTaller.release();
+        }catch (InterruptedException e){
+            Thread.currentThread().interrupt();
+        }       
+    }
+    
+    public void realizarInspeccion(Avion av) throws InterruptedException{
+        try{
+            sInspeccion.acquire();
+            av.inspeccionar();
+            sInspeccion.release();
+        }catch (InterruptedException e){
+            Thread.currentThread().interrupt();
+        }
+    }
 }
