@@ -21,8 +21,8 @@ public class ventana2 extends javax.swing.JFrame {
     public ventana2() {
         initComponents();
         Avion av;
-        aeroM = new Aeropuerto(jTextHangarM, jTextAreaEstcM, jTextPE1M, jTextPE2M, jTextPE3M, jTextPE4M, jTextPE5M, jTextPE6M, jTextARM);
-        aeroB = new Aeropuerto(jTextHangarB, jTextAreaEstcB, jTextPE1B, jTextPE2B, jTextPE3B, jTextPE4B, jTextPE5B, jTextPE6B, jTextARB);
+        aeroM = new Aeropuerto(jTextHangarM, jTextAreaEstcM, jTextPE1M, jTextPE2M, jTextPE3M, jTextPE4M, jTextPE5M, jTextPE6M, jTextARM,jTextP1M,jTextP2M, jTextP3M, jTextP4M);
+        aeroB = new Aeropuerto(jTextHangarB, jTextAreaEstcB, jTextPE1B, jTextPE2B, jTextPE3B, jTextPE4B, jTextPE5B, jTextPE6B, jTextARB, jTextP1B, jTextP2B, jTextP3B, jTextP4B);
         for (int i=1; i<=100; i++)
         {
             if (esPar(i)){

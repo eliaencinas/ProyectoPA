@@ -24,10 +24,9 @@ public class Aeropuerto {
     //Random 
     Random rand = new Random();
     // Listas
-    Listas  avionesHangar;
-    Listas areaEstac;
+    Listas  avionesHangar, areaEstac, areaRod;
     ListaPuertas puertasEmb;
-    Listas areaRod;
+    ListasPistas pistas;
     //semaforos
     public Semaphore puertaEmbarqueExclusiva;
     public Semaphore puertaDesembarqueExclusiva;
@@ -38,7 +37,7 @@ public class Aeropuerto {
     private Lock leer = lock.readLock();
     private Lock escribir = lock.writeLock();
     
-    public Aeropuerto(JTextField h, JTextField ArEst, JTextField pt1, JTextField pt2, JTextField pt3, JTextField pt4, JTextField pt5, JTextField pt6, JTextField areaR){
+    public Aeropuerto(JTextField h, JTextField ArEst, JTextField pt1, JTextField pt2, JTextField pt3, JTextField pt4, JTextField pt5, JTextField pt6, JTextField areaR, JTextField pista1, JTextField pista2, JTextField pista3, JTextField pista4){
         numPersonas = 3000;
         avionesHangar = new Listas(h);
         areaEstac = new Listas(ArEst);
@@ -48,6 +47,7 @@ public class Aeropuerto {
         puertaDesembarqueExclusiva = new Semaphore(1);
         puertaEmbarque = new Semaphore(4);
         listaPuertaEmbarque = new ArrayList<>(6);
+        pistas = new ListasPistas(pista1, pista2, pista3, pista4);
     }
     
     
@@ -155,4 +155,28 @@ public class Aeropuerto {
         areaRod.sacar(av);
     }
     
+    public void solicitarPistaDespegue(Avion av){
+        int numPista = obtenerPista(av);
+        pistas.meter(av);
+        av.despegar();
+    }
+    
+    public void solicitarPistaAterrizaje(Avion av){
+        int numPista = obtenerPista(av);
+        pistas.meter(av);
+        av.aterrizar();
+    }
+    
+    public void liberarPista(Avion av){
+        pistas.sacar(av);
+    }
+    
+    public int obtenerPista(Avion av){
+        for(int i = 1; i <= 4; i++){
+            if(!pistas.estaOcupada(i, av)){
+                return i;
+            }
+        }
+        return -1;
+    }
 }

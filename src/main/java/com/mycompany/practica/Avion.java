@@ -88,6 +88,26 @@ public class Avion extends Thread{
         
     }
     
+    public void despegar() {
+        System.out.println("Avion " + id + " despegando...");
+        try {
+            sleep(rand.nextInt(4001) + 1000); // Simula el tiempo de despegue
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Avion " + id + " ha despegado.");
+    }
+
+    public void aterrizar() {
+        System.out.println("Avion " + id + " aterrizando...");
+        try {
+            sleep(rand.nextInt(4001) + 1000); // Simula el tiempo de aterrizaje
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Avion " + id + " ha aterrizado.");
+    }
+    
     public void run(){
        try{
            aeropuerto.AvionEnHangar(this);
@@ -102,6 +122,12 @@ public class Avion extends Thread{
            aeropuerto.AvionEnAreaRodaje(this);
            sleep(1000 +(rand.nextInt(4001)));
            aeropuerto.AvionSalirAreaRod(this);
+           sleep(1000+(rand.nextInt(2001)));
+           aeropuerto.solicitarPistaDespegue(this);
+           sleep(15000 + (rand.nextInt(16000)));
+           aeropuerto.liberarPista(this);
+           aeropuerto.solicitarPistaAterrizaje(this);
+           aeropuerto.liberarPista(this);
            aeropuerto.solicitarPuertaDesembarque(this);
            
            
