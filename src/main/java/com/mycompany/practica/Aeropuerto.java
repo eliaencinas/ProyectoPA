@@ -24,7 +24,7 @@ public class Aeropuerto {
     //Random 
     Random rand = new Random();
     // Listas
-    Listas  avionesHangar, areaEstac, areaRod;
+    Listas  avionesHangar, areaEstac, areaRod,aerovia;
     ListaPuertas puertasEmb;
     ListasPistas pistas;
     //semaforos
@@ -37,7 +37,7 @@ public class Aeropuerto {
     private Lock leer = lock.readLock();
     private Lock escribir = lock.writeLock();
     
-    public Aeropuerto(JTextField h, JTextField ArEst, JTextField pt1, JTextField pt2, JTextField pt3, JTextField pt4, JTextField pt5, JTextField pt6, JTextField areaR, JTextField pista1, JTextField pista2, JTextField pista3, JTextField pista4){
+    public Aeropuerto(JTextField h, JTextField ArEst, JTextField pt1, JTextField pt2, JTextField pt3, JTextField pt4, JTextField pt5, JTextField pt6, JTextField areaR, JTextField pista1, JTextField pista2, JTextField pista3, JTextField pista4, JTextField aero){
         numPersonas = 3000;
         avionesHangar = new Listas(h);
         areaEstac = new Listas(ArEst);
@@ -48,6 +48,7 @@ public class Aeropuerto {
         puertaEmbarque = new Semaphore(4);
         listaPuertaEmbarque = new ArrayList<>(6);
         pistas = new ListasPistas(pista1, pista2, pista3, pista4);
+        aerovia = new Listas(aero);
     }
     
     
@@ -159,17 +160,16 @@ public class Aeropuerto {
         int numPista = obtenerPista(av);
         pistas.meter(av);
         av.despegar();
+        pistas.sacar(av);
     }
     
     public void solicitarPistaAterrizaje(Avion av){
         int numPista = obtenerPista(av);
         pistas.meter(av);
         av.aterrizar();
-    }
-    
-    public void liberarPista(Avion av){
         pistas.sacar(av);
     }
+    
     
     public int obtenerPista(Avion av){
         for(int i = 1; i <= 4; i++){
@@ -179,4 +179,10 @@ public class Aeropuerto {
         }
         return -1;
     }
+    
+    public void meterEnAerovia(Avion av) throws InterruptedException{
+        aerovia.meter(av);
+        Thread.sleep(15000 + (rand.nextInt(16000)));
+    }
+
 }
