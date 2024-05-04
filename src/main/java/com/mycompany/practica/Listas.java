@@ -22,19 +22,22 @@ public class Listas {
     
     public synchronized void  meter(Thread t){
         lista.add(t);
-        imprimirAv();
+        imprimir();
     }
     
     public synchronized void sacar(Thread t){
         lista.remove(t);
-        imprimirAv();
+        imprimir();
     }
     
-    public void imprimirAv(){
+    public void imprimir(){
         String contenido = "";
         for (int i = 0; i<lista.size(); i++) {
-            System.out.println("-----se imprime: " +((Avion)lista.get(i)).miId());
-            contenido += ((Avion)lista.get(i)).miId() + " "; // Muestra ID del avión
+            if (lista.get(i) instanceof Avion) {
+            contenido += "Avion: " + ((Avion) lista.get(i)).miId() + " ";
+        } else if (lista.get(i) instanceof Autobus) {
+            contenido += "Bus: " + ((Autobus) lista.get(i)).miId() + " ";
+        }
         }
         tf.setText(contenido);
     }

@@ -24,7 +24,7 @@ public class Aeropuerto {
     //Random 
     Random rand = new Random();
     // Listas
-    Listas  avionesHangar, areaEstac, areaRod,aerovia;
+    Listas  avionesHangar, areaEstac, areaRod,aerovia, busCiudad, busAeropuerto;
     ListaPuertas puertasEmb;
     ListasPistas pistas;
     //semaforos
@@ -36,9 +36,11 @@ public class Aeropuerto {
     private ReadWriteLock lock = new ReentrantReadWriteLock();
     private Lock leer = lock.readLock();
     private Lock escribir = lock.writeLock();
+    JTextField nP;
     
-    public Aeropuerto(JTextField h, JTextField ArEst, JTextField pt1, JTextField pt2, JTextField pt3, JTextField pt4, JTextField pt5, JTextField pt6, JTextField areaR, JTextField pista1, JTextField pista2, JTextField pista3, JTextField pista4, JTextField aero){
-        numPersonas = 3000;
+    public Aeropuerto(JTextField bC, JTextField bA,JTextField numP,JTextField h, JTextField ArEst, JTextField pt1, JTextField pt2, JTextField pt3, JTextField pt4, JTextField pt5, JTextField pt6, JTextField areaR, JTextField pista1, JTextField pista2, JTextField pista3, JTextField pista4, JTextField aero){
+        nP = numP;
+        numPersonas = 0;
         avionesHangar = new Listas(h);
         areaEstac = new Listas(ArEst);
         puertasEmb = new ListaPuertas(pt1, pt2, pt3, pt4, pt5, pt6);
@@ -49,6 +51,8 @@ public class Aeropuerto {
         listaPuertaEmbarque = new ArrayList<>(6);
         pistas = new ListasPistas(pista1, pista2, pista3, pista4);
         aerovia = new Listas(aero);
+        busCiudad = new Listas(bC);
+        busAeropuerto = new Listas(bA);
     }
     
     
@@ -126,6 +130,7 @@ public class Aeropuerto {
         escribir.lock();
         try{
             numPersonas += personas;
+            actualizarNumPersonas();
         }finally { escribir.unlock();}
     }
     
@@ -133,7 +138,7 @@ public class Aeropuerto {
         escribir.lock();
         try{
             numPersonas -= personas;
-            
+            actualizarNumPersonas();
         }finally {escribir.unlock();}
         return personas;
     }
@@ -145,6 +150,10 @@ public class Aeropuerto {
             num = numPersonas;
         }finally { leer.unlock();}
         return num;
+    }
+    
+    public void actualizarNumPersonas(){
+        nP.setText(String.valueOf(numPersonas));
     }
     
     //Area de Rodaje
@@ -185,4 +194,14 @@ public class Aeropuerto {
         Thread.sleep(15000 + (rand.nextInt(16000)));
     }
 
+    public void autobusEnCiudad(Autobus bus){
+        busAeropuerto.sacar(bus);
+        busCiudad.meter(bus);
+    }
+    
+    public void autobusEnAeropuerto(Autobus bus){
+        busCiudad.sacar(bus);
+        busAeropuerto.meter(bus);
+    }
+    
 }

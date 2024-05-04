@@ -116,6 +116,7 @@ public class Avion extends Thread{
            
              aeropuerto.solicitarPuertaEmbarque(this);
              sleep(800);
+             aeropuerto.actualizarNumPersonas();
              aeropuerto.AvionEnAreaRodaje(this);
              sleep(1000 +(rand.nextInt(4001)));
              aeropuerto.AvionSalirAreaRod(this);

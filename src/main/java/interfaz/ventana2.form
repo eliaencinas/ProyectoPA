@@ -28,110 +28,141 @@
               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
               <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="207" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="292" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="LabelAMB" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
+                      <Component id="jTextHangarM" min="-2" pref="292" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="LabelPasajerosM" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextPasajerosM" max="32767" attributes="0"/>
-                              </Group>
+                      <Component id="LabelPasajerosM" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jTextPasajerosM" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="LabelP1M" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jTextP1M" min="-2" pref="101" max="-2" attributes="0"/>
+                                      <Component id="LabelTallerM" min="-2" pref="37" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="LabelARM" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jTextARM" min="-2" pref="264" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="LabelAEM" alignment="0" min="-2" pref="54" max="-2" attributes="0"/>
-                                          <Component id="LabelPE1M" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="LabelPE2M" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="LabelPE3M" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="LabelHangarM" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jTextHangarM" min="-2" pref="292" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="jTextAreaEstcM" pref="292" max="32767" attributes="0"/>
-                                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                                  <Component id="jTextPE2M" alignment="1" min="-2" pref="113" max="-2" attributes="0"/>
-                                                  <Component id="jTextPE1M" min="-2" pref="113" max="-2" attributes="0"/>
-                                                  <Component id="jTextPE3M" alignment="1" min="-2" pref="113" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="LabelHangarM" min="-2" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="LabelPE1M" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="LabelPE2M" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="LabelPE3M" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
-                                              <Component id="jTextTallerM" alignment="0" max="32767" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="LabelAEM" min="-2" pref="54" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jTextAreaEstcM" min="-2" pref="292" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="jTextPE2M" alignment="1" min="-2" pref="113" max="-2" attributes="0"/>
+                                          <Component id="jTextPE1M" min="-2" pref="113" max="-2" attributes="0"/>
+                                          <Component id="jTextPE3M" alignment="1" min="-2" pref="113" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="LabelPE4M" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="jTextPE4M" min="-2" pref="109" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="LabelPE5M" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="jTextPE5M" min="-2" pref="109" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="LabelPE6M" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="jTextPE6M" min="-2" pref="109" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
+                                  <Component id="jTextTallerM" min="-2" pref="292" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="LabelTCM" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jTextTCM" min="-2" pref="111" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="LabelTAM" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jTextTAM" min="-2" pref="102" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="LabelTallerM" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
-                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                              <Component id="jTextAMB" alignment="1" min="-2" pref="364" max="-2" attributes="0"/>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="LabelARM" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="jTextARM" min="-2" pref="264" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="LabelAMB" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextAMB" alignment="0" min="-2" pref="364" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="LabelP1M" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="jTextP1M" min="-2" pref="101" max="-2" attributes="0"/>
+                                      </Group>
                                       <Group type="102" attributes="0">
                                           <Component id="LAbelP2M" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="jTextP2M" min="-2" pref="101" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="LabelP4M" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <EmptySpace min="-2" pref="191" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="LabelPE4M" min="-2" max="-2" attributes="0"/>
-                                              <Component id="LabelPE5M" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="LabelPE6M" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="LabelP3M" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          </Group>
                                       </Group>
                                   </Group>
+                                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                                  <Component id="LabelP4M" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jTextPE4M" max="32767" attributes="0"/>
-                                      <Component id="jTextPE5M" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jTextPE6M" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jTextP3M" alignment="0" pref="109" max="32767" attributes="0"/>
-                                      <Component id="jTextP4M" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="jTextP4M" min="-2" pref="109" max="-2" attributes="0"/>
                               </Group>
                           </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="LabelTAM" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="LabelTCM" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jTextTCM" pref="270" max="32767" attributes="0"/>
+                                  <Component id="jTextTAM" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="LabelP3M" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jTextP3M" min="-2" pref="109" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
+                  </Group>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <Component id="LabelPasajerosB" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="jTextPasajerosB" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="jTextABM" alignment="0" max="32767" attributes="0"/>
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
@@ -158,21 +189,17 @@
                                                       <Component id="jTextAreaEstcB" alignment="0" min="-2" pref="315" max="-2" attributes="0"/>
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                              <Group type="102" attributes="0">
-                                                                  <Component id="jTextPE3B" min="-2" pref="113" max="-2" attributes="0"/>
-                                                                  <EmptySpace max="32767" attributes="0"/>
-                                                                  <Component id="LabelPE6M1" min="-2" max="-2" attributes="0"/>
+                                                              <Component id="jTextPE3B" pref="148" max="32767" attributes="0"/>
+                                                              <Component id="jTextPE2B" max="32767" attributes="0"/>
+                                                              <Component id="jTextPE1B" max="32767" attributes="0"/>
+                                                          </Group>
+                                                          <EmptySpace min="87" pref="87" max="-2" attributes="0"/>
+                                                          <Group type="103" groupAlignment="0" attributes="0">
+                                                              <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                                                  <Component id="LabelPE4M1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="LabelPE5M1" alignment="1" min="-2" max="-2" attributes="0"/>
                                                               </Group>
-                                                              <Group type="102" alignment="0" attributes="0">
-                                                                  <Component id="jTextPE2B" min="-2" pref="113" max="-2" attributes="0"/>
-                                                                  <EmptySpace max="32767" attributes="0"/>
-                                                                  <Component id="LabelPE5M1" min="-2" max="-2" attributes="0"/>
-                                                              </Group>
-                                                              <Group type="102" alignment="0" attributes="0">
-                                                                  <Component id="jTextPE1B" min="-2" pref="113" max="-2" attributes="0"/>
-                                                                  <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
-                                                                  <Component id="LabelPE4M1" min="-2" max="-2" attributes="0"/>
-                                                              </Group>
+                                                              <Component id="LabelPE6M1" alignment="1" min="-2" max="-2" attributes="0"/>
                                                           </Group>
                                                           <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
                                                           <Group type="103" groupAlignment="0" attributes="0">
@@ -198,14 +225,14 @@
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Group type="102" attributes="0">
+                                                          <Component id="jTextP1B" min="-2" pref="202" max="-2" attributes="0"/>
+                                                          <EmptySpace pref="62" max="32767" attributes="0"/>
+                                                          <Component id="LabelP3M1" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" attributes="0">
                                                           <Component id="jTextP2B" min="-2" pref="202" max="-2" attributes="0"/>
                                                           <EmptySpace max="32767" attributes="0"/>
                                                           <Component id="LabelP4M1" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="102" attributes="0">
-                                                          <Component id="jTextP1B" min="-2" pref="202" max="-2" attributes="0"/>
-                                                          <EmptySpace max="32767" attributes="0"/>
-                                                          <Component id="LabelP3M1" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -215,23 +242,33 @@
                                                   </Group>
                                               </Group>
                                           </Group>
-                                          <Component id="LabelABM" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                              <Component id="LabelTCB" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jTextTCB" max="32767" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
                               <Component id="LabelTAB" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jTextTAB" min="-2" pref="71" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jTextTAB" min="-2" pref="358" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="187" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="LabelTCB" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jTextTCB" min="-2" pref="369" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="176" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jTextABM" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="LabelABM" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -247,18 +284,21 @@
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace pref="34" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="LabelTCM" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="LabelTAM" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jTextTCM" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextTAM" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="LabelTCB" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="LabelTAB" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jTextTCB" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jTextTAM" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelTAM" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelTAB" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jTextTAB" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="20" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="LabelPasajerosM" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jTextPasajerosM" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -268,25 +308,28 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="LabelHangarM" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextHangarM" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextHangarB" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jTextHangarM" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextHangarB" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="LabelHangarM" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="LabelTallerM" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextTallerM" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="LabelTallerB" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jTextTallerB" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelAEM" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextAreaEstcM" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="LabelAEM" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextAreaEstcM" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jTextAreaEstcB" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelTallerM" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextTallerM" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -319,7 +362,7 @@
                       <Component id="LabelPE3M" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextPE3M" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="LabelPE6M" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextPE6M" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTextPE6M" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextPE3B" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextPE6B" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -343,28 +386,28 @@
                   <Component id="jTextP3B" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jTextP1B" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="34" max="32767" attributes="0"/>
+              <EmptySpace pref="28" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="LAbelP2M" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="LabelP4M" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jTextP2M" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelP4M" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jTextP4M" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="LAbelP2M1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextP2B" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="LabelP4M1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jTextP4B" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextP2B" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="LabelAMB" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="LabelABM" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jTextAMB" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jTextABM" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

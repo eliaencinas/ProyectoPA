@@ -14,12 +14,13 @@ public class Autobus extends Thread{
     private String id;
     private int numPasajeros;
     private Aeropuerto a;
+    private boolean enAeropuerto;
     private final Random rand = new Random();
     
-    public Autobus(int id, Aeropuerto a){
-        //pos = id; 
+    public Autobus(int id, Aeropuerto a){ 
         this.id = "B-" + crearId(id);
         esDeMadrid(id);
+        this.enAeropuerto = false;
         this.a = a;
         System.out.println(getMarcaTiempo()+ " Bus " + this.id + " es creado ");
     }
@@ -43,15 +44,35 @@ public class Autobus extends Thread{
         return id % 2 == 0;
     }
     
+    public String miId(){
+        return id;
+    }
     
+    public void entrarAeropuerto(){
+        a.autobusEnAeropuerto(this);
+        enAeropuerto = true;
+        
+    }
+    
+    public void entrarCiudad(){
+        a.autobusEnCiudad(this);
+        enAeropuerto = false;
+    }
     @Override
     public void run(){
        while(true){
            try{
-                this.subirPasajeros();
-                this.rutaAeropuerto();
-                this.rutaCiudad();
-                this.bajarPasajeros();
+                subirPasajeros();
+                a.actualizarNumPersonas();
+                if(enAeropuerto){
+                    rutaAeropuerto();
+                    entrarCiudad();
+                } else{
+                    rutaCiudad();
+                    entrarAeropuerto();
+                }
+                bajarPasajeros();
+                a.actualizarNumPersonas();
                 
             }catch (InterruptedException e){}
        }    
@@ -61,7 +82,7 @@ public class Autobus extends Thread{
     private void subirPasajeros() throws InterruptedException{
         numPasajeros = rand.nextInt(51); // pasajeros que se suben al autobús
         System.out.println(getMarcaTiempo()+ " Bus " + id + " sube " + numPasajeros + " pasajeros");
-       // a.EntrarBus(numPasajeros); //Se meten los pasajeros al aeropuerto
+        a.Entrar(numPasajeros); //Se meten los pasajeros al aeropuerto
         Thread.sleep((rand.nextInt(4) + 2) * 1000);
     }
     
@@ -73,7 +94,7 @@ public class Autobus extends Thread{
     private void bajarPasajeros() throws InterruptedException{
         numPasajeros = rand.nextInt(51); //Pasajeros que se bajan del autobus
         System.out.println(getMarcaTiempo() + " Bus " + id + " deja " + numPasajeros + " pasajeros");
-       // a.SalirBus(numPasajeros); //Se sacan del aeropuerto
+        a.Salir(numPasajeros); //Se sacan del aeropuerto
         Thread.sleep((rand.nextInt(4) + 2) * 1000);
     }
     
