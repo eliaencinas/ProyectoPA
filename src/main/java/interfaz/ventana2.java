@@ -129,6 +129,8 @@ public class ventana2 extends javax.swing.JFrame {
         LabelABM = new javax.swing.JLabel();
         jTextAMB = new javax.swing.JTextField();
         jTextABM = new javax.swing.JTextField();
+        bttParar = new javax.swing.JButton();
+        bttSeguir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -232,6 +234,20 @@ public class ventana2 extends javax.swing.JFrame {
 
         LabelABM.setText("Aerovia Barcelona-Madrid");
 
+        bttParar.setText("Detener");
+        bttParar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bttPararActionPerformed(evt);
+            }
+        });
+
+        bttSeguir.setText("Reanudar");
+        bttSeguir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bttSeguirActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -331,9 +347,10 @@ public class ventana2 extends javax.swing.JFrame {
                                         .addComponent(jTextTallerM, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(110, 110, 110)
+                        .addGap(32, 32, 32)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
+                                .addGap(78, 78, 78)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(LabelP1M1)
@@ -351,7 +368,7 @@ public class ventana2 extends javax.swing.JFrame {
                                                     .addComponent(LabelTallerB, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextPasajerosB, javax.swing.GroupLayout.DEFAULT_SIZE, 387, Short.MAX_VALUE)
+                                    .addComponent(jTextPasajerosB)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addComponent(jTextAreaEstcB, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jTextHangarB, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -362,40 +379,38 @@ public class ventana2 extends javax.swing.JFrame {
                                             .addComponent(jTextPE3B, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jTextARB, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextP1B, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextP2B, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(50, 50, 50)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTextP1B, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextP2B, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(50, 50, 50)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(LabelP3M1)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jTextP3B, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(LabelP4M1)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jTextP4B, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(LabelPE1M1)
-                                        .addGap(229, 229, 229)
-                                        .addComponent(LabelPE4M1)
+                                        .addComponent(LabelP3M1)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jTextPE4B, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jTextP3B, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(LabelPE3M1)
-                                        .addGap(229, 229, 229)
-                                        .addComponent(LabelPE6M1)
+                                        .addComponent(LabelP4M1)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jTextPE6B, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(LabelPE2M1)
-                                        .addGap(229, 229, 229)
-                                        .addComponent(LabelPE5M1)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jTextPE5B, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                        .addComponent(jTextP4B, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(LabelPE1M1)
+                                .addGap(229, 229, 229)
+                                .addComponent(LabelPE4M1)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextPE4B, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(LabelPE3M1)
+                                .addGap(229, 229, 229)
+                                .addComponent(LabelPE6M1)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextPE6B, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(LabelPE2M1)
+                                .addGap(229, 229, 229)
+                                .addComponent(LabelPE5M1)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextPE5B, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextABM, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 632, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(112, 112, 112))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -409,15 +424,15 @@ public class ventana2 extends javax.swing.JFrame {
                                     .addComponent(LabelTCB))
                                 .addGap(18, 18, 18)
                                 .addComponent(jTextTCB, javax.swing.GroupLayout.PREFERRED_SIZE, 369, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextABM, javax.swing.GroupLayout.PREFERRED_SIZE, 632, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(41, 41, 41))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextAMB, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(bttParar)
+                    .addComponent(jTextAMB, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(181, 181, 181)
+                .addComponent(bttSeguir)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -537,10 +552,14 @@ public class ventana2 extends javax.swing.JFrame {
                     .addComponent(LabelAMB)
                     .addComponent(LabelABM))
                 .addGap(18, 18, 18)
-                .addComponent(jTextAMB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(jTextABM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(96, 96, 96))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextAMB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextABM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bttParar)
+                    .addComponent(bttSeguir))
+                .addGap(81, 81, 81))
         );
 
         pack();
@@ -561,6 +580,18 @@ public class ventana2 extends javax.swing.JFrame {
     private void jTextTCMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextTCMActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextTCMActionPerformed
+
+    private void bttPararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttPararActionPerformed
+        // TODO add your handling code here:
+        aeroM.detener();
+        aeroB.detener();
+    }//GEN-LAST:event_bttPararActionPerformed
+
+    private void bttSeguirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttSeguirActionPerformed
+        // TODO add your handling code here:
+        aeroM.continuar();
+        aeroB.continuar();
+    }//GEN-LAST:event_bttSeguirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -632,6 +663,8 @@ public class ventana2 extends javax.swing.JFrame {
     private javax.swing.JLabel LabelTCM;
     private javax.swing.JLabel LabelTallerB;
     private javax.swing.JLabel LabelTallerM;
+    private javax.swing.JButton bttParar;
+    private javax.swing.JButton bttSeguir;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
