@@ -26,8 +26,6 @@ public class Aeropuerto {
     JTextField nP;
     private boolean parar = false;
     private Aeropuerto otroAeropuerto;
-    //Array
-    ArrayList<String> listaPuertaEmbarque;
     //Random 
     Random rand = new Random();
     // Listas
@@ -61,7 +59,6 @@ public class Aeropuerto {
         puertaEmbarqueExclusiva = new Semaphore(1);
         puertaDesembarqueExclusiva = new Semaphore(1);
         puertaEmbarque = new Semaphore(4);
-        listaPuertaEmbarque = new ArrayList<>(6);
         pistas = new ListasPistas(pista1, pista2, pista3, pista4);
         aerovia = new Listas(aero);
         busCiudad = new Listas(bC);
@@ -361,6 +358,7 @@ public class Aeropuerto {
                 Logger.getLogger(Aeropuerto.class.getName()).log(Level.SEVERE, null, ex);
             }
         }else{
+            
             busCiudad.sacar(bus);
             busAeropuerto.meter(bus);
         }
