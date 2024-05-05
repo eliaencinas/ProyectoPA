@@ -23,8 +23,8 @@ public class ventana2 extends javax.swing.JFrame {
         initComponents();
         Avion av;
         Autobus bus;
-        aeroM = new Aeropuerto(jTextTCM,jTextTAM,jTextPasajerosM,jTextHangarM, jTextAreaEstcM, jTextPE1M, jTextPE2M, jTextPE3M, jTextPE4M, jTextPE5M, jTextPE6M, jTextARM,jTextP1M,jTextP2M, jTextP3M, jTextP4M,jTextAMB,jTextTallerM);
-        aeroB = new Aeropuerto(jTextTCB,jTextTAB,jTextPasajerosB,jTextHangarB, jTextAreaEstcB, jTextPE1B, jTextPE2B, jTextPE3B, jTextPE4B, jTextPE5B, jTextPE6B, jTextARB, jTextP1B, jTextP2B, jTextP3B, jTextP4B, jTextABM,jTextTallerB);
+        aeroM = new Aeropuerto(aeroB,jTextTCM,jTextTAM,jTextPasajerosM,jTextHangarM, jTextAreaEstcM, jTextPE1M, jTextPE2M, jTextPE3M, jTextPE4M, jTextPE5M, jTextPE6M, jTextARM,jTextP1M,jTextP2M, jTextP3M, jTextP4M,jTextAMB,jTextTallerM);
+        aeroB = new Aeropuerto(aeroM,jTextTCB,jTextTAB,jTextPasajerosB,jTextHangarB, jTextAreaEstcB, jTextPE1B, jTextPE2B, jTextPE3B, jTextPE4B, jTextPE5B, jTextPE6B, jTextARB, jTextP1B, jTextP2B, jTextP3B, jTextP4B, jTextABM,jTextTallerB);
         for (int i=1; i<=100; i++)
         {
             if (esPar(i)){
