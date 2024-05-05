@@ -23,6 +23,8 @@ import javax.swing.JTextField;
 public class Aeropuerto {
     // atributos
     private int numPersonas;
+    JTextField nP;
+    private boolean parar = false;
     //Array
     ArrayList<String> listaPuertaEmbarque;
     //Random 
@@ -44,8 +46,8 @@ public class Aeropuerto {
     private Lock escribir = lock.writeLock();
     private Lock parada = new ReentrantLock();
     private Condition parado = parada.newCondition();
-    JTextField nP;
-    private boolean parar = false;
+    
+    
     
     public Aeropuerto(JTextField bC, JTextField bA,JTextField numP,JTextField h, JTextField ArEst, JTextField pt1, JTextField pt2, JTextField pt3, JTextField pt4, JTextField pt5, JTextField pt6, JTextField areaR, JTextField pista1, JTextField pista2, JTextField pista3, JTextField pista4, JTextField aero,JTextField taller){
         nP = numP;
