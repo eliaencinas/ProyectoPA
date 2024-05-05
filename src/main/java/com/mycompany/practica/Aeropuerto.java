@@ -25,6 +25,7 @@ public class Aeropuerto {
     private int numPersonas;
     JTextField nP;
     private boolean parar = false;
+    private Aeropuerto otroAeropuerto;
     //Array
     ArrayList<String> listaPuertaEmbarque;
     //Random 
@@ -49,7 +50,8 @@ public class Aeropuerto {
     
     
     
-    public Aeropuerto(JTextField bC, JTextField bA,JTextField numP,JTextField h, JTextField ArEst, JTextField pt1, JTextField pt2, JTextField pt3, JTextField pt4, JTextField pt5, JTextField pt6, JTextField areaR, JTextField pista1, JTextField pista2, JTextField pista3, JTextField pista4, JTextField aero,JTextField taller){
+    public Aeropuerto(Aeropuerto aeropuerto2,JTextField bC, JTextField bA,JTextField numP,JTextField h, JTextField ArEst, JTextField pt1, JTextField pt2, JTextField pt3, JTextField pt4, JTextField pt5, JTextField pt6, JTextField areaR, JTextField pista1, JTextField pista2, JTextField pista3, JTextField pista4, JTextField aero,JTextField taller){
+        this.otroAeropuerto = aeropuerto2;
         nP = numP;
         numPersonas = 0;
         avionesHangar = new Listas(h);
@@ -312,6 +314,17 @@ public class Aeropuerto {
         return -1;
     }
     
+    public void aerovia(Avion av) throws InterruptedException{
+        try{
+            Thread.sleep(15000 + rand.nextInt(16000));
+            String ciudadOrigen = av.ciudadOrigen();
+            
+            if(!ciudadOrigen.equals("Madrid")){
+                otroAeropuerto.meterEnAerovia(av);
+            }
+        } catch(InterruptedException e){}
+    }
+    
     public void meterEnAerovia(Avion av) throws InterruptedException{
         if(mirarSiParar()){
             try{
@@ -321,11 +334,10 @@ public class Aeropuerto {
             }
         }else{
             aerovia.meter(av);
-            Thread.sleep(15000 + (rand.nextInt(16000)));
         }
         
     }
-
+    
     public void autobusEnCiudad(Autobus bus){
         if(mirarSiParar()){
             try{
@@ -379,6 +391,7 @@ public class Aeropuerto {
             sInspeccion.acquire();
             av.inspeccionar();
             sInspeccion.release();
+            avTaller.sacar(av);
         }catch (InterruptedException e){
             Thread.currentThread().interrupt();
         }
@@ -389,7 +402,7 @@ public class Aeropuerto {
     }
     
     public boolean mirarSiParar(){
-        return this.parar;
+        return parar;
     }
     public void continuar(){
         parada.lock();
