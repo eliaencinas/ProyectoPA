@@ -37,6 +37,7 @@ public class Aeropuerto {
     public Semaphore puertaEmbarqueExclusiva;
     public Semaphore puertaDesembarqueExclusiva;
     public Semaphore puertaEmbarque;
+    public Semaphore pista;
     public Semaphore meterEnLista = new Semaphore(1);
     public Semaphore sTaller = new Semaphore(20,true);
     public Semaphore sInspeccion = new Semaphore(1,true);
@@ -68,6 +69,7 @@ public class Aeropuerto {
         puertaEmbarqueExclusiva = new Semaphore(1);
         puertaDesembarqueExclusiva = new Semaphore(1);
         puertaEmbarque = new Semaphore(4);
+        pista = new Semaphore(4);
         pistas = new ListasPistas(pista1, pista2, pista3, pista4);
         busCiudad = new Listas(bC);
         busAeropuerto = new Listas(bA);
@@ -285,7 +287,7 @@ public class Aeropuerto {
     }
     
     //pistas
-    public void solicitarPistaDespegue(Avion av){
+    public void solicitarPistaDespegue(Avion av) throws InterruptedException{
         if(mirarSiParar()){
             try{
                 parada.await();
@@ -294,14 +296,22 @@ public class Aeropuerto {
                 Thread.currentThread().interrupt();
             }
         }else{
-            obtenerPista(av);
-            pistas.meter(av);
-            av.despegar();
-            pistas.sacar(av);
+            if(pista.availablePermits() == 0){
+                Thread.sleep(1000 + rand.nextInt(6001));
+            }else{
+                pista.acquire();
+                pistas.meter(av);
+                Thread.sleep(1000 + rand.nextInt(4001));
+                pista.release();
+                av.despegar();
+                
+                pistas.sacar(av);
+            }
+            
         }
     }
     
-    public void solicitarPistaAterrizaje(Avion av){
+    public void solicitarPistaAterrizaje(Avion av) throws InterruptedException{
         if(mirarSiParar()){
             try{
                 parada.await();
@@ -310,15 +320,19 @@ public class Aeropuerto {
                 Thread.currentThread().interrupt();
             }
         }else{
-            obtenerPista(av);
-            pistas.meter(av);
-            av.aterrizar();
-            pistas.sacar(av);
+            if(pista.availablePermits() == 0){
+                Thread.sleep(1000 + rand.nextInt(6001));
+            }else{
+                pista.acquire();
+                pistas.meter(av);
+                pista.release();
+                pistas.sacar(av);
+            }
         }
     }
     
     
-    public int obtenerPista(Avion av){
+    /*public int obtenerPista(Avion av){
         if(mirarSiParar()){
             try{
                 parada.await();
@@ -334,7 +348,7 @@ public class Aeropuerto {
             }
         }
         return -1;
-    }
+    }*/
     
     // aerovia
   /*  public void aerovia(Avion av) throws InterruptedException{
