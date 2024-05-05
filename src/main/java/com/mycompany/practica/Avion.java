@@ -41,7 +41,7 @@ public class Avion extends Thread{
             ident = "000" + id;
         }else if (id < 100 && id >= 10){
             ident = "00" + id;
-        }else if (id < 1000 && id > 100){
+        }else if (id < 1000 && id >= 100){
             ident = "0" + id;
         }else{
             ident ="" + id;
