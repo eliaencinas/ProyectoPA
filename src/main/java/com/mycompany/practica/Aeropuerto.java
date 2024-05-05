@@ -25,11 +25,12 @@ public class Aeropuerto {
     private int numPersonas;
     JTextField nP;
     private boolean parar = false;
+    private boolean esMadrid;
     private Aeropuerto otroAeropuerto;
     //Random 
     Random rand = new Random();
     // Listas
-    Listas  avionesHangar, areaEstac, areaRod,aerovia, busCiudad, busAeropuerto,avTaller;
+    Listas  avionesHangar, areaEstac, areaRod,aeroviaADestino, aeroviaAMi, busCiudad, busAeropuerto,avTaller;
     ListaPuertas puertasEmb;
     ListasPistas pistas;
     //semaforos
@@ -48,8 +49,16 @@ public class Aeropuerto {
     
     
     
-    public Aeropuerto(Aeropuerto aeropuerto2,JTextField bC, JTextField bA,JTextField numP,JTextField h, JTextField ArEst, JTextField pt1, JTextField pt2, JTextField pt3, JTextField pt4, JTextField pt5, JTextField pt6, JTextField areaR, JTextField pista1, JTextField pista2, JTextField pista3, JTextField pista4, JTextField aero,JTextField taller){
+    public Aeropuerto(boolean esMadrid, Listas aeroviaMB, Listas aeroviaBM, Aeropuerto aeropuerto2,JTextField bC, JTextField bA,JTextField numP,JTextField h, JTextField ArEst, JTextField pt1, JTextField pt2, JTextField pt3, JTextField pt4, JTextField pt5, JTextField pt6, JTextField areaR, JTextField pista1, JTextField pista2, JTextField pista3, JTextField pista4, JTextField aero,JTextField taller){
         this.otroAeropuerto = aeropuerto2;
+        this.esMadrid = esMadrid;
+        if (esMadrid){
+            this.aeroviaADestino = aeroviaMB;
+            this.aeroviaAMi = aeroviaBM;
+        }else{ 
+            this.aeroviaADestino = aeroviaBM;
+            this.aeroviaAMi = aeroviaMB;    
+        }
         nP = numP;
         numPersonas = 0;
         avionesHangar = new Listas(h);
@@ -60,7 +69,6 @@ public class Aeropuerto {
         puertaDesembarqueExclusiva = new Semaphore(1);
         puertaEmbarque = new Semaphore(4);
         pistas = new ListasPistas(pista1, pista2, pista3, pista4);
-        aerovia = new Listas(aero);
         busCiudad = new Listas(bC);
         busAeropuerto = new Listas(bA);
         avTaller = new Listas(taller);
@@ -276,6 +284,7 @@ public class Aeropuerto {
         }
     }
     
+    //pistas
     public void solicitarPistaDespegue(Avion av){
         if(mirarSiParar()){
             try{
@@ -327,7 +336,8 @@ public class Aeropuerto {
         return -1;
     }
     
-    public void aerovia(Avion av) throws InterruptedException{
+    // aerovia
+  /*  public void aerovia(Avion av) throws InterruptedException{
         try{
             Thread.sleep(15000 + rand.nextInt(16000));
             String ciudadOrigen = av.ciudadOrigen();
@@ -336,9 +346,45 @@ public class Aeropuerto {
                 otroAeropuerto.meterEnAerovia(av);
             }
         } catch(InterruptedException e){}
+    }*/
+    
+    public void meterAeroviaADestino(Avion av) throws InterruptedException{
+        if (mirarSiParar()){
+            try{
+                parada.await();
+            }catch(InterruptedException ex){}
+        }else{
+            aeroviaADestino.meter(av);
+            Thread.sleep((rand.nextInt(16) + 15) *1000);
+        }
+        
     }
     
-    public void meterEnAerovia(Avion av) throws InterruptedException{
+    public void salirAeroviaDestino(Avion av) throws InterruptedException{
+        if (mirarSiParar()){
+            parada.await();
+        }else{
+            aeroviaADestino.sacar(av);
+        }
+    }
+    
+    public void meterAeroviaAMi(Avion av)throws InterruptedException{
+        if(mirarSiParar()){
+            parada.await();
+        }else{
+            aeroviaAMi.meter(av);
+        }
+    }
+    
+    public void salirAeroviaAMi(Avion av) throws InterruptedException{
+        if (mirarSiParar()){
+            parada.await();
+        }else{
+            aeroviaAMi.sacar(av);
+        }
+    }
+    
+   /* public void meterEnAerovia(Avion av) throws InterruptedException{
         if(mirarSiParar()){
             try{
                 parada.await();
@@ -350,8 +396,9 @@ public class Aeropuerto {
             aerovia.meter(av);
         }
         
-    }
+    }*/
     
+    //autobuses
     public void autobusEnCiudad(Autobus bus){
         if(mirarSiParar()){
             try{
@@ -448,9 +495,9 @@ public class Aeropuerto {
         return avTaller.longitud();
     }
 
-    public Listas getAerovia() {
+   /* public Listas getAerovia() {
         return aerovia;
-    }
+    }*/
     
     
 }

@@ -116,7 +116,7 @@ public class Avion extends Thread{
        try{
            while(true){
              recorrerAeropuertoOrigen();
-             aeropuerto.aerovia(this);
+             aeropuerto.meterAeroviaADestino(this);
              numVuelos ++;
              recorrerAeropuertoDestino();
              aeropuerto.solicitarTaller(this);
