@@ -199,6 +199,7 @@ public class Aeropuerto {
                 actualizarNumPersonas();
             }finally { escribir.unlock();}
         } 
+        actualizarNumPersonas();
     }
     
     public int Salir(int personas){
@@ -215,6 +216,7 @@ public class Aeropuerto {
             actualizarNumPersonas();
         }finally {escribir.unlock();}
         }  
+        actualizarNumPersonas();
         return personas;
     }
     

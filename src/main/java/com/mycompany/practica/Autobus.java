@@ -62,7 +62,7 @@ public class Autobus extends Thread{
     public void run(){
        while(true){
            try{
-                subirPasajeros();
+                /*subirPasajeros();
                 a.actualizarNumPersonas();
                 if(enAeropuerto){
                     rutaAeropuerto();
@@ -72,7 +72,16 @@ public class Autobus extends Thread{
                     entrarAeropuerto();
                 }
                 bajarPasajeros();
-                a.actualizarNumPersonas();
+                a.actualizarNumPersonas();*/
+                numPasajeros= rand.nextInt(51);
+                Thread.sleep((rand.nextInt(4) + 2) * 1000);
+                rutaAeropuerto();
+                a.autobusEnAeropuerto(this);
+                a.Entrar(numPasajeros);
+                numPasajeros = rand.nextInt(a.NumPersonas());
+                a.Salir(numPasajeros);
+                rutaCiudad();
+                a.autobusEnCiudad(this);
                 
             }catch (InterruptedException e){}
        }    
@@ -80,9 +89,9 @@ public class Autobus extends Thread{
     
     
     private void subirPasajeros() throws InterruptedException{
-        numPasajeros = rand.nextInt(51); // pasajeros que se suben al autobús
+        //numPasajeros = rand.nextInt(51); // pasajeros que se suben al autobús
         System.out.println(getMarcaTiempo()+ " Bus " + id + " sube " + numPasajeros + " pasajeros");
-        a.Entrar(numPasajeros); //Se meten los pasajeros al aeropuerto
+        //a.Entrar(numPasajeros); //Se meten los pasajeros al aeropuerto
         Thread.sleep((rand.nextInt(4) + 2) * 1000);
     }
     
@@ -92,7 +101,7 @@ public class Autobus extends Thread{
     }
     
     private void bajarPasajeros() throws InterruptedException{
-        numPasajeros = rand.nextInt(51); //Pasajeros que se bajan del autobus
+        numPasajeros = 0; //Pasajeros que se bajan del autobus
         System.out.println(getMarcaTiempo() + " Bus " + id + " deja " + numPasajeros + " pasajeros");
         a.Salir(numPasajeros); //Se sacan del aeropuerto
         Thread.sleep((rand.nextInt(4) + 2) * 1000);
