@@ -40,11 +40,11 @@ public class Aeropuerto {
     public Semaphore sTaller = new Semaphore(20,true);
     public Semaphore sInspeccion = new Semaphore(1,true);
     //Locks
-    private ReadWriteLock lock = new ReentrantReadWriteLock();
+    /*private ReadWriteLock lock = new ReentrantReadWriteLock();
     private Lock leer = lock.readLock();
-    private Lock escribir = lock.writeLock();
-    private Lock parada = new ReentrantLock();
-    private Condition parado = parada.newCondition();
+    private Lock escribir = lock.writeLock();*/
+    private Lock lock = new ReentrantLock();
+    private Condition parada = lock.newCondition();
     
     
     
@@ -71,9 +71,10 @@ public class Aeropuerto {
     public void AvionEnHangar(Avion av){
         if(mirarSiParar()){
             try{
-                parado.await();
+                parada.await();
             }catch(InterruptedException ex){
                 Logger.getLogger(Aeropuerto.class.getName()).log(Level.SEVERE, null, ex);
+                Thread.currentThread().interrupt();
             }
         }else{
             avionesHangar.meter(av);
@@ -83,9 +84,10 @@ public class Aeropuerto {
     public void AvionSalirHangar(Avion av){
         if(mirarSiParar()){
             try{
-                parado.await();
+                parada.await();
             }catch(InterruptedException ex){
                 Logger.getLogger(Aeropuerto.class.getName()).log(Level.SEVERE, null, ex);
+                Thread.currentThread().interrupt();
             }
         }else{
             avionesHangar.sacar(av);
@@ -96,9 +98,10 @@ public class Aeropuerto {
      public void EntrarAreaEstac(Avion av){
         if(mirarSiParar()){
             try{
-                parado.await();
+                parada.await();
             }catch(InterruptedException ex){
                 Logger.getLogger(Aeropuerto.class.getName()).log(Level.SEVERE, null, ex);
+                Thread.currentThread().interrupt();
             }
         }else{
             areaEstac.meter(av);//Añade el elemento
@@ -108,9 +111,10 @@ public class Aeropuerto {
     public void SalirAreaEstac(Avion av){
         if(mirarSiParar()){
             try{
-                parado.await();
+                parada.await();
             }catch(InterruptedException ex){
                 Logger.getLogger(Aeropuerto.class.getName()).log(Level.SEVERE, null, ex);
+                Thread.currentThread().interrupt();
             }
         }else{
             areaEstac.sacar(av);
@@ -121,9 +125,10 @@ public class Aeropuerto {
     public void solicitarPuertaEmbarque(Avion av){
         if(mirarSiParar()){
             try{
-                parado.await();
+                parada.await();
             }catch(InterruptedException ex){
                 Logger.getLogger(Aeropuerto.class.getName()).log(Level.SEVERE, null, ex);
+                Thread.currentThread().interrupt();
             }
         }else{
             try{
@@ -153,9 +158,10 @@ public class Aeropuerto {
     public void solicitarPuertaDesembarque(Avion av) throws InterruptedException{
         if(mirarSiParar()){
             try{
-                parado.await();
+                parada.await();
             }catch(InterruptedException ex){
                 Logger.getLogger(Aeropuerto.class.getName()).log(Level.SEVERE, null, ex);
+                Thread.currentThread().interrupt();
             }
         }else{
             try{
@@ -185,35 +191,37 @@ public class Aeropuerto {
     
     //gestion de personas
     public void Entrar(int personas){
+        lock.lock();
         if(mirarSiParar()){
             try{
-                parado.await();
+                parada.await();
             }catch(InterruptedException ex){
                 Logger.getLogger(Aeropuerto.class.getName()).log(Level.SEVERE, null, ex);
+                Thread.currentThread().interrupt();
             }
         }else{
-            escribir.lock();
             try{
                 numPersonas += personas;
                 actualizarNumPersonas();
-            }finally { escribir.unlock();}
-        } 
+            }finally { lock.unlock();}
+        }
         actualizarNumPersonas();
     }
     
     public int Salir(int personas){
         if(mirarSiParar()){
             try{
-                parado.await();
+                parada.await();
             }catch(InterruptedException ex){
                 Logger.getLogger(Aeropuerto.class.getName()).log(Level.SEVERE, null, ex);
+                Thread.currentThread().interrupt();
             }
         }else{
-            escribir.lock();
+            lock.lock();
         try{
             numPersonas -= personas;
             actualizarNumPersonas();
-        }finally {escribir.unlock();}
+        }finally {lock.unlock();}
         }  
         actualizarNumPersonas();
         return personas;
@@ -221,16 +229,17 @@ public class Aeropuerto {
     
     public int NumPersonas(){
         int num = 0;
-        leer.lock();
+        lock.lock();
         try{
             num = numPersonas;
-        }finally { leer.unlock();}
+        }finally { lock.unlock();}
         
         if(mirarSiParar()){
             try{
-                parado.await();
+                parada.await();
             }catch(InterruptedException ex){
                 Logger.getLogger(Aeropuerto.class.getName()).log(Level.SEVERE, null, ex);
+                Thread.currentThread().interrupt();
             }
         }
         return num;
@@ -244,9 +253,10 @@ public class Aeropuerto {
     public void AvionEnAreaRodaje(Avion av){
         if(mirarSiParar()){
             try{
-                parado.await();
+                parada.await();
             }catch(InterruptedException ex){
                 Logger.getLogger(Aeropuerto.class.getName()).log(Level.SEVERE, null, ex);
+                Thread.currentThread().interrupt();
             }
         }else{
             areaRod.meter(av);
@@ -256,9 +266,10 @@ public class Aeropuerto {
     public void AvionSalirAreaRod(Avion av){
         if(mirarSiParar()){
             try{
-                parado.await();
+                parada.await();
             }catch(InterruptedException ex){
                 Logger.getLogger(Aeropuerto.class.getName()).log(Level.SEVERE, null, ex);
+                Thread.currentThread().interrupt();
             }
         }else{
             areaRod.sacar(av);
@@ -268,12 +279,13 @@ public class Aeropuerto {
     public void solicitarPistaDespegue(Avion av){
         if(mirarSiParar()){
             try{
-                parado.await();
+                parada.await();
             }catch(InterruptedException ex){
                 Logger.getLogger(Aeropuerto.class.getName()).log(Level.SEVERE, null, ex);
+                Thread.currentThread().interrupt();
             }
         }else{
-            int numPista = obtenerPista(av);
+            obtenerPista(av);
             pistas.meter(av);
             av.despegar();
             pistas.sacar(av);
@@ -283,12 +295,13 @@ public class Aeropuerto {
     public void solicitarPistaAterrizaje(Avion av){
         if(mirarSiParar()){
             try{
-                parado.await();
+                parada.await();
             }catch(InterruptedException ex){
                 Logger.getLogger(Aeropuerto.class.getName()).log(Level.SEVERE, null, ex);
+                Thread.currentThread().interrupt();
             }
         }else{
-            int numPista = obtenerPista(av);
+            obtenerPista(av);
             pistas.meter(av);
             av.aterrizar();
             pistas.sacar(av);
@@ -299,9 +312,10 @@ public class Aeropuerto {
     public int obtenerPista(Avion av){
         if(mirarSiParar()){
             try{
-                parado.await();
+                parada.await();
             }catch(InterruptedException ex){
                 Logger.getLogger(Aeropuerto.class.getName()).log(Level.SEVERE, null, ex);
+                Thread.currentThread().interrupt();
             }
         }else{
             for(int i = 1; i <= 4; i++){
@@ -327,9 +341,10 @@ public class Aeropuerto {
     public void meterEnAerovia(Avion av) throws InterruptedException{
         if(mirarSiParar()){
             try{
-                parado.await();
+                parada.await();
             }catch(InterruptedException ex){
                 Logger.getLogger(Aeropuerto.class.getName()).log(Level.SEVERE, null, ex);
+                Thread.currentThread().interrupt();
             }
         }else{
             aerovia.meter(av);
@@ -340,9 +355,10 @@ public class Aeropuerto {
     public void autobusEnCiudad(Autobus bus){
         if(mirarSiParar()){
             try{
-                parado.await();
+                parada.await();
             }catch(InterruptedException ex){
                 Logger.getLogger(Aeropuerto.class.getName()).log(Level.SEVERE, null, ex);
+                Thread.currentThread().interrupt();
             }
         }else{
             busAeropuerto.sacar(bus);
@@ -353,9 +369,10 @@ public class Aeropuerto {
     public void autobusEnAeropuerto(Autobus bus){
         if(mirarSiParar()){
             try{
-                parado.await();
+                parada.await();
             }catch(InterruptedException ex){
                 Logger.getLogger(Aeropuerto.class.getName()).log(Level.SEVERE, null, ex);
+                Thread.currentThread().interrupt();
             }
         }else{
             
@@ -368,9 +385,10 @@ public class Aeropuerto {
     public void solicitarTaller(Avion av) throws InterruptedException{
         if(mirarSiParar()){
             try{
-                parado.await();
+                parada.await();
             }catch(InterruptedException ex){
                 Logger.getLogger(Aeropuerto.class.getName()).log(Level.SEVERE, null, ex);
+                Thread.currentThread().interrupt();
             }
         }else{
            try{
@@ -405,12 +423,34 @@ public class Aeropuerto {
         return parar;
     }
     public void continuar(){
-        parada.lock();
+        lock.lock();
         try{
             this.parar = false;
-            parado.signalAll();
+            parada.signalAll();
         }finally{
-            parada.unlock();
+            lock.unlock();
         }
     }
+    
+    public int numAvionesHangar(){
+        return avionesHangar.longitud();
+    }
+    
+    public int numAvionesAreaEstac(){
+       return areaEstac.longitud();
+    }
+    
+    public int numAVionesAreaRod(){
+        return areaRod.longitud();
+    }
+    
+    public int numAvionesTaller(){
+        return avTaller.longitud();
+    }
+
+    public Listas getAerovia() {
+        return aerovia;
+    }
+    
+    
 }

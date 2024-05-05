@@ -41,4 +41,8 @@ public class Listas {
         }
         tf.setText(contenido);
     }
+    
+    public int longitud(){
+       return lista.size();
+    }
 }
