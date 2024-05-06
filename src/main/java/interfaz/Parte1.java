@@ -7,6 +7,7 @@ package interfaz;
 import com.mycompany.practica.Aeropuerto;
 import com.mycompany.practica.Autobus;
 import com.mycompany.practica.Avion;
+import com.mycompany.practica.HiloSuperior;
 import com.mycompany.practica.Listas;
 import com.mycompany.practica.Log;
 
@@ -23,6 +24,7 @@ public class Parte1 extends javax.swing.JFrame {
     Aeropuerto aeroB;
     Listas aeroviaMB, aeroviaBM;
     Log log = new Log("evolucionAeropuerto.txt");
+    HiloSuperior superior = new HiloSuperior();
     public Parte1() {
         initComponents();
         Avion av;
@@ -35,12 +37,12 @@ public class Parte1 extends javax.swing.JFrame {
         for (int i=1; i<8001; i++)
         {
             if (esPar(i)){
-                av=new Avion(i,aeroM, aeroB, log);
+                av=new Avion(i,aeroM, aeroB, log, superior);
                 //bus = new Autobus(i,aeroM);
                 av.start();
                 //bus.start();
             }else{
-                av=new Avion(i,aeroB, aeroM, log);
+                av=new Avion(i,aeroB, aeroM, log, superior);
                 //bus = new Autobus(i,aeroB);
                 av.start();
                 //bus.start();
@@ -50,10 +52,10 @@ public class Parte1 extends javax.swing.JFrame {
         
         for(int i = 1; i < 4001; i++){
             if(esPar(i)){
-                bus = new Autobus(i,aeroM, log);
+                bus = new Autobus(i,aeroM, log, superior);
                 bus.start();
             }else{
-                bus = new Autobus(i,aeroB, log);
+                bus = new Autobus(i,aeroB, log, superior);
                 bus.start();
             }
         }   
@@ -600,14 +602,16 @@ public class Parte1 extends javax.swing.JFrame {
 
     private void bttPararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttPararActionPerformed
         // TODO add your handling code here:
-        aeroM.detener();
-        aeroB.detener();
+        //aeroM.detener();
+        //aeroB.detener();
+        superior.detener();
     }//GEN-LAST:event_bttPararActionPerformed
 
     private void bttSeguirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttSeguirActionPerformed
         // TODO add your handling code here:
         /*aeroM.continuar();
         aeroB.continuar();*/
+        superior.reanudar();
     }//GEN-LAST:event_bttSeguirActionPerformed
 
     /**

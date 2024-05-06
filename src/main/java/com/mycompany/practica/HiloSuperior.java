@@ -4,10 +4,41 @@
  */
 package com.mycompany.practica;
 
+import java.io.Serializable;
+
 /**
  *
  * @author elia3
  */
-public class HiloSuperior {
+public class HiloSuperior implements Serializable{
+    private boolean reanudar;
+    
+    public HiloSuperior(){
+        reanudar = true;
+    }
+    
+    public synchronized void esperar(){
+       try{
+           while(!reanudar){
+                wait();
+            }
+        }catch (InterruptedException e){}
+        
+    }
+    
+    public synchronized boolean estaEjecutando(){
+        return reanudar;
+    }
+    
+    
+    public synchronized void detener(){
+        reanudar = false;
+    }
+    
+    
+    public synchronized void reanudar(){
+        reanudar = true;
+        notifyAll();
+    }
     
 }

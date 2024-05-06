@@ -16,12 +16,14 @@ public class Autobus extends Thread{
     private int numPasajeros;
     private Aeropuerto a;
     private Log log;
+    private HiloSuperior superior;
     private final Random rand = new Random();
     
-    public Autobus(int id, Aeropuerto a, Log log){ 
+    public Autobus(int id, Aeropuerto a, Log log, HiloSuperior superior){ 
         this.id = "B-" + crearId(id);
         this.a = a;
         this.log = log;
+        this.superior = superior;
         if (esMadrid(id)){
             aeropuertoActual = "Madrid";
         }else{ aeropuertoActual = "Barcelona";}
@@ -71,12 +73,17 @@ public class Autobus extends Thread{
            try{
                 
                 entrarCiudad();
+                superior.esperar();
                 numPasajeros= rand.nextInt(51);
                 Thread.sleep((rand.nextInt(4) + 2) * 1000);
+                superior.esperar();
                 rutaAeropuerto();
+                superior.esperar();
                 entrarAeropuerto();
                 a.Entrar(numPasajeros);
+                superior.esperar();
                 Thread.sleep((rand.nextInt(4) + 2) * 1000);
+                superior.esperar();
                 if(a.NumPersonas() >= 50){
                     numPasajeros = rand.nextInt(51);
                 }else{
@@ -86,9 +93,12 @@ public class Autobus extends Thread{
                         numPasajeros = rand.nextInt(a.NumPersonas());
                     }
                 }
+                superior.esperar();
                 a.Salir(numPasajeros);
+                superior.esperar();
                 rutaCiudad();
                 numPasajeros = 0;
+                superior.esperar();
             }catch (InterruptedException e){}
        }    
     }
