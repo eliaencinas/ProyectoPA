@@ -25,7 +25,7 @@ public class Aeropuerto {
     private int numPersonas;
     JTextField nP;
     private boolean parar = false;
-    //Random 
+    private Log log;
     Random rand = new Random();
     // Listas
     Listas  avionesHangar, areaEstac, areaRod,aeroviaADestino, aeroviaAMi, busCiudad, busAeropuerto,avTaller;
@@ -48,10 +48,10 @@ public class Aeropuerto {
     
     
     
-    public Aeropuerto( Listas aeroviaDest, Listas aeroviaAMi,JTextField bC, JTextField bA,JTextField numP,JTextField h, JTextField ArEst, JTextField pt1, JTextField pt2, JTextField pt3, JTextField pt4, JTextField pt5, JTextField pt6, JTextField areaR, JTextField pista1, JTextField pista2, JTextField pista3, JTextField pista4, JTextField aero,JTextField taller){
+    public Aeropuerto( Log log, Listas aeroviaDest, Listas aeroviaAMi,JTextField bC, JTextField bA,JTextField numP,JTextField h, JTextField ArEst, JTextField pt1, JTextField pt2, JTextField pt3, JTextField pt4, JTextField pt5, JTextField pt6, JTextField areaR, JTextField pista1, JTextField pista2, JTextField pista3, JTextField pista4, JTextField aero,JTextField taller){
         this.aeroviaADestino = aeroviaDest;
         this.aeroviaAMi = aeroviaAMi;
-        
+        this.log = log;
         nP = numP;
         numPersonas = 0;
         avionesHangar = new Listas(h);
@@ -72,10 +72,13 @@ public class Aeropuerto {
     // Hangar
     public void AvionEnHangar(Avion av){
         avionesHangar.meter(av);
+        log.logEvent("el avion " + av.miId() + "ha entrado en el hangar del aeropuerto " + av.getAeropuertoActual());
+        
     }
     
     public void AvionSalirHangar(Avion av){
         avionesHangar.sacar(av);
+        log.logEvent("el avion " + av.miId() + "ha salido del hangar del aeropuerto " + av.getAeropuertoActual());
     }
     
     // Area de estacionamiento

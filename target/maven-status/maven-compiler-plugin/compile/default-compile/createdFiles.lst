@@ -3,6 +3,7 @@ com\mycompany\practica\ListasPistas.class
 com\mycompany\practica\InterfazAeropuerto.class
 interfaz\Parte1.class
 com\mycompany\practica\Avion.class
+com\mycompany\practica\Log.class
 interfaz\Parte2$1.class
 interfaz\Parte1$2.class
 com\mycompany\practica\Autobus.class

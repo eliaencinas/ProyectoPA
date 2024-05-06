@@ -8,6 +8,7 @@ import com.mycompany.practica.Aeropuerto;
 import com.mycompany.practica.Autobus;
 import com.mycompany.practica.Avion;
 import com.mycompany.practica.Listas;
+import com.mycompany.practica.Log;
 
 /**
  *
@@ -21,6 +22,7 @@ public class Parte1 extends javax.swing.JFrame {
     Aeropuerto aeroM;
     Aeropuerto aeroB;
     Listas aeroviaMB, aeroviaBM;
+    Log log = new Log("evolucionAeropuerto.txt");
     public Parte1() {
         initComponents();
         Avion av;
@@ -28,8 +30,8 @@ public class Parte1 extends javax.swing.JFrame {
         
         aeroviaMB = new Listas(jTextAMB);
         aeroviaBM = new Listas(jTextABM);
-        aeroM = new Aeropuerto(aeroviaMB,aeroviaBM,jTextTCM,jTextTAM,jTextPasajerosM,jTextHangarM, jTextAreaEstcM, jTextPE1M, jTextPE2M, jTextPE3M, jTextPE4M, jTextPE5M, jTextPE6M, jTextARM,jTextP1M,jTextP2M, jTextP3M, jTextP4M,jTextAMB,jTextTallerM);
-        aeroB = new Aeropuerto(aeroviaBM, aeroviaMB, jTextTCB,jTextTAB,jTextPasajerosB,jTextHangarB, jTextAreaEstcB, jTextPE1B, jTextPE2B, jTextPE3B, jTextPE4B, jTextPE5B, jTextPE6B, jTextARB, jTextP1B, jTextP2B, jTextP3B, jTextP4B, jTextABM,jTextTallerB);
+        aeroM = new Aeropuerto(log, aeroviaMB,aeroviaBM,jTextTCM,jTextTAM,jTextPasajerosM,jTextHangarM, jTextAreaEstcM, jTextPE1M, jTextPE2M, jTextPE3M, jTextPE4M, jTextPE5M, jTextPE6M, jTextARM,jTextP1M,jTextP2M, jTextP3M, jTextP4M,jTextAMB,jTextTallerM);
+        aeroB = new Aeropuerto(log, aeroviaBM, aeroviaMB, jTextTCB,jTextTAB,jTextPasajerosB,jTextHangarB, jTextAreaEstcB, jTextPE1B, jTextPE2B, jTextPE3B, jTextPE4B, jTextPE5B, jTextPE6B, jTextARB, jTextP1B, jTextP2B, jTextP3B, jTextP4B, jTextABM,jTextTallerB);
         for (int i=1; i<=100; i++)
         {
             if (esPar(i)){

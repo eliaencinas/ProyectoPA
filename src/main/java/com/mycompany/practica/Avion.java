@@ -13,7 +13,7 @@ import java.util.Random;
 public class Avion extends Thread{
     //atributos
     private String id;
-    private String ciudadOrigen;
+    private String aeropuertoActual;
     private int numVuelos;
     private int numPasajeros;
     private int capacidadMaxima;
@@ -28,6 +28,11 @@ public class Avion extends Thread{
     public Avion(int id, Aeropuerto aeropuerto, Aeropuerto aeropuertoDestino){
         this.aeropuerto = aeropuerto;
         this.aeropuertoDestino = aeropuertoDestino;
+        if (esMadrid(id)){
+            aeropuertoActual= "Madrid";
+        }else{
+            aeropuertoActual = "Barcelona";
+        }
         char l1 = letras.charAt(rand.nextInt(letras.length()));
         char l2 = letras.charAt(rand.nextInt(letras.length()));
         this.id = "" + l1 + l2 + "-" + crearId(id);
@@ -36,6 +41,14 @@ public class Avion extends Thread{
         super.setName(String.valueOf(this.id));
         System.out.println(getMarcaTiempo()+ " Avion " + this.id + " es creado ");
         
+    }
+    private boolean esMadrid(int id){
+        return(id % 2 == 0);
+    }
+    private void aeropuertoActualCambia(){
+        if (aeropuertoActual.equals("Madrid")){
+            aeropuertoActual = "Barcelona";
+        }else{ aeropuertoActual = "Madrid";}
     }
     
     private String crearId(int id){
@@ -117,6 +130,7 @@ public class Avion extends Thread{
                 recorrerAeropuertoOrigen();
                 aeropuerto.meterAeroviaADestino(this);
                 this.numVuelos = this.getNumVuelos() + 1;
+                aeropuertoActualCambia();
                 recorrerAeropuertoDestino();
                 if(debeIrHangar()){
                     aeropuertoDestino.AvionEnHangar(this);
@@ -194,6 +208,7 @@ public class Avion extends Thread{
         aeropuertoDestino.solicitarPistaDespegue(this);
         aeropuertoDestino.meterAeroviaADestino(this);
         aeropuertoDestino.salirAeroviaDestino(this);
+        aeropuertoActualCambia();
         aeropuerto.solicitarPistaAterrizaje(this);
         aeropuerto.AvionEnAreaRodaje(this);
         sleep(3000 + rand.nextInt(6001));
@@ -212,6 +227,9 @@ public class Avion extends Thread{
             aeropuerto.EntrarAreaEstac(this);
         }
         
+    }
+    public String getAeropuertoActual(){
+        return aeropuertoActual;
     }
     
     public boolean debeIrHangar(){

@@ -1,0 +1,200 @@
+[06-05-2024 14:09:09] el avion AO-0001ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion YS-0099ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion XS-0100ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion VV-0097ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion EX-0093ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion ZY-0098ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion EH-0095ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion LO-0069ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion OM-0094ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion HT-0092ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion NA-0091ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion IS-0089ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion HS-0090ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion AQ-0087ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion ED-0088ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion SY-0086ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion MP-0084ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion OC-0083ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion IJ-0085ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion UQ-0079ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion AP-0081ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion GJ-0077ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion YR-0044ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion OZ-0082ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion HU-0080ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion CT-0075ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion IS-0078ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion SE-0057ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion DL-0073ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion RQ-0072ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion NL-0074ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion ZK-0054ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion EI-0071ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion MH-0096ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion JF-0053ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion TH-0070ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion PB-0051ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion RJ-0067ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion EB-0066ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion KG-0065ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion GW-0064ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion GP-0063ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion FW-0062ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion FA-0061ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion QD-0060ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion SR-0059ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion ZB-0058ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion JX-0056ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion DH-0076ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion VF-0055ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion OX-0068ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion QS-0049ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion FS-0052ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion UX-0050ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion MG-0048ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion PO-0047ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion SS-0045ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion JI-0039ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion RX-0046ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion MI-0042ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion MZ-0043ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion YN-0037ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion EF-0041ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion TM-0040ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion WQ-0017ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion RA-0038ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion MI-0015ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion LE-0022ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion XO-0019ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion AL-0024ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion QP-0021ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion JC-0023ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion NE-0026ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion JE-0025ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion MS-0028ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion NF-0027ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion UB-0030ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion SE-0029ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion SB-0032ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion MJ-0031ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion EO-0034ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion HF-0036ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion VT-0033ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion UK-0013ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion QH-0012ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion VP-0014ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion WD-0035ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion DR-0016ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion UG-0003ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion UE-0005ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion TB-0018ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion XM-0007ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion ZL-0020ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion LW-0009ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion GC-0004ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion IQ-0011ha entrado en el hangar del aeropuerto Barcelona
+[06-05-2024 14:09:09] el avion XI-0006ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion VM-0008ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion YQ-0010ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:09] el avion CZ-0002ha entrado en el hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion AO-0001ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion YS-0099ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion VV-0097ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion XS-0100ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion EX-0093ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion ZY-0098ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion EH-0095ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion OM-0094ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion HT-0092ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion HS-0090ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion IS-0089ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion NA-0091ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion LO-0069ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion MP-0084ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion ED-0088ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion AQ-0087ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion IJ-0085ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion SY-0086ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion UQ-0079ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion OC-0083ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion AP-0081ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion GJ-0077ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion YR-0044ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion OZ-0082ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion HU-0080ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion IS-0078ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion CT-0075ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion SE-0057ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion DL-0073ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion RQ-0072ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion ZK-0054ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion NL-0074ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion EI-0071ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion MH-0096ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion JF-0053ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion TH-0070ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion EB-0066ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion PB-0051ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion RJ-0067ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion KG-0065ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion GW-0064ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion GP-0063ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion FA-0061ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion FW-0062ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion QD-0060ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion SR-0059ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion JX-0056ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion ZB-0058ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion DH-0076ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion FS-0052ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion QS-0049ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion VF-0055ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion MG-0048ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion UX-0050ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion OX-0068ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion RX-0046ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion JI-0039ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion SS-0045ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion PO-0047ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion YN-0037ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion MZ-0043ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion MI-0042ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion MI-0015ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion RA-0038ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion WQ-0017ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion EF-0041ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion JC-0023ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion AL-0024ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion QP-0021ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion LE-0022ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion XO-0019ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion TM-0040ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion JE-0025ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion NF-0027ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion MS-0028ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion WD-0035ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion SE-0029ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion UB-0030ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion NE-0026ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion UE-0005ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion UG-0003ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion ZL-0020ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion DR-0016ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion VP-0014ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion UK-0013ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion XI-0006ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion SB-0032ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion EO-0034ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion MJ-0031ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion HF-0036ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion VT-0033ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion QH-0012ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion YQ-0010ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion VM-0008ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion IQ-0011ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion GC-0004ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion LW-0009ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion XM-0007ha salido del hangar del aeropuerto Barcelona
+[06-05-2024 14:09:10] el avion TB-0018ha salido del hangar del aeropuerto Madrid
+[06-05-2024 14:09:10] el avion CZ-0002ha salido del hangar del aeropuerto Madrid
