@@ -17,7 +17,6 @@ public class Avion extends Thread{
     private int numVuelos;
     private int numPasajeros;
     private int capacidadMaxima;
-    private boolean enEst;
     private Aeropuerto aeropuerto;
     private Aeropuerto aeropuertoDestino;
     
