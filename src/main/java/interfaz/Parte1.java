@@ -594,8 +594,8 @@ public class Parte1 extends javax.swing.JFrame {
 
     private void bttSeguirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttSeguirActionPerformed
         // TODO add your handling code here:
-        aeroM.continuar();
-        aeroB.continuar();
+        /*aeroM.continuar();
+        aeroB.continuar();*/
     }//GEN-LAST:event_bttSeguirActionPerformed
 
     /**

@@ -34,6 +34,7 @@ public class Avion extends Thread{
         this.numVuelos = 0;
         this.capacidadMaxima = rand.nextInt(201) + 100;
         super.setName(String.valueOf(this.id));
+        System.out.println(getMarcaTiempo()+ " Avion " + this.id + " es creado ");
         
     }
     
@@ -115,9 +116,8 @@ public class Avion extends Thread{
            while(true){
                 recorrerAeropuertoOrigen();
                 aeropuerto.meterAeroviaADestino(this);
-                numVuelos ++;
+                this.numVuelos = this.getNumVuelos() + 1;
                 recorrerAeropuertoDestino();
-                aeropuertoDestino.solicitarTaller(this);
                 if(debeIrHangar()){
                     aeropuertoDestino.AvionEnHangar(this);
                     sleep(15000 + rand.nextInt(15001));
@@ -201,7 +201,7 @@ public class Avion extends Thread{
         aeropuerto.solicitarPuertaDesembarque(this);
         aeropuerto.EntrarAreaEstac(this);
         sleep(1000 + rand.nextInt(4001));
-        aeropuerto.solicitarTaller(this);
+        //aeropuerto.solicitarTaller(this);
         if(debeIrHangar()){
             aeropuertoDestino.AvionEnHangar(this);
             sleep(15000 + rand.nextInt(15001));
@@ -218,4 +218,7 @@ public class Avion extends Thread{
         return rand.nextBoolean();
     }
     
+    private String getMarcaTiempo(){
+        return java.time.LocalTime.now().toString();
+    }
 }
