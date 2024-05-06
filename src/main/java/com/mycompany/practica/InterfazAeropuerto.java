@@ -12,13 +12,12 @@ import java.rmi.RemoteException;
  * @author NoeliaUni
  */
 public interface InterfazAeropuerto extends Remote {
-   /* void Aeropuerto(Aeropuerto aeropuerto) throws RemoteException;
-    int obtenerNumPasajeros() throws RemoteException;
-    int obtenerNumAvionesHangar() throws RemoteException;
-    int obtenerNumAvionesTaller() throws RemoteException;
-    int obtenerNumAvionesAreaEst() throws RemoteException;
-    int obtenerNumAvionesAreaRod() throws RemoteException;
-    Listas obtenerColaAvionesAerovia() throws RemoteException;
-    void cerrarPista( int numPista) throws RemoteException;
-    void abrirPista( int numPista) throws RemoteException;*/
+    int obtenerNumPasajeros(Aeropuerto aeropuerto) throws RemoteException;
+    int obtenerNumAvionesHangar(Aeropuerto aeropuerto) throws RemoteException;
+    int obtenerNumAvionesTaller(Aeropuerto aeropuerto) throws RemoteException;
+    int obtenerNumAvionesAreaEst(Aeropuerto aeropuerto) throws RemoteException;
+    int obtenerNumAvionesAreaRod(Aeropuerto aeropuerto) throws RemoteException;
+    Listas obtenerColaAvionesAerovia(Aeropuerto aeropuerto) throws RemoteException;
+    void cerrarPista(Aeropuerto aeropuerto, int numPista) throws RemoteException;
+    void abrirPista(Aeropuerto aeropuerto, int numPista) throws RemoteException;
 }

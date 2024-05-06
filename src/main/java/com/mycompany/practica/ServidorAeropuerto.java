@@ -4,69 +4,65 @@
  */
 package com.mycompany.practica;
 
-//import java.rmi.RemoteException;
-//import java.rmi.server.UnicastRemoteObject;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 
 /**
  *
- * @author NoeliaUni
+ * @author Noelia y elia
  */
-//public class ServidorAeropuerto extends UnicastRemoteObject implements InterfazAeropuerto{
+public class ServidorAeropuerto extends UnicastRemoteObject implements InterfazAeropuerto{
 
-   /* public ServidorAeropuerto() {
+    public ServidorAeropuerto() throws RemoteException{
         super();
-    }*/
-    /*private Aeropuerto aeropuerto;
-    
-    @Override
-    public void Aeropuerto(Aeropuerto aeropuerto) throws RemoteException{
-        this.aeropuerto = aeropuerto;
     }
     
     
     @Override
-    public int obtenerNumPasajeros() throws RemoteException {
+    public int obtenerNumPasajeros(Aeropuerto aeropuerto) throws RemoteException {
         return aeropuerto.NumPersonas();
     }
 
     
     @Override
-    public int obtenerNumAvionesHangar() throws RemoteException {
+    public int obtenerNumAvionesHangar(Aeropuerto aeropuerto) throws RemoteException {
        return aeropuerto.numAvionesHangar();
     }
 
     
     @Override
-    public int obtenerNumAvionesTaller() throws RemoteException {
+    public int obtenerNumAvionesTaller(Aeropuerto aeropuerto) throws RemoteException {
         return aeropuerto.numAvionesTaller();
     }
 
     
     @Override
-    public int obtenerNumAvionesAreaEst() throws RemoteException {
+    public int obtenerNumAvionesAreaEst(Aeropuerto aeropuerto) throws RemoteException {
        return aeropuerto.numAvionesAreaEstac();
     }
 
     
     @Override
-    public int obtenerNumAvionesAreaRod() throws RemoteException {
+    public int obtenerNumAvionesAreaRod(Aeropuerto aeropuerto) throws RemoteException {
         return aeropuerto.numAVionesAreaRod();
     }
 
    
     @Override
-    public Listas obtenerColaAvionesAerovia() throws RemoteException {
+    public Listas obtenerColaAvionesAerovia(Aeropuerto aeropuerto) throws RemoteException {
         return aeropuerto.getAerovia();
     }
 
     
-   /* public void cerrarPista( int numPista) throws RemoteException {
+    @Override
+    public void cerrarPista(Aeropuerto aeropuerto, int numPista) throws RemoteException {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     
-    public void abrirPista(int numPista) throws RemoteException {
+    @Override
+    public void abrirPista(Aeropuerto aeropuerto, int numPista) throws RemoteException {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }*/
+    }
     
-//}
+}
