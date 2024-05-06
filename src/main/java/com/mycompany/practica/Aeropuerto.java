@@ -83,11 +83,13 @@ public class Aeropuerto {
     
     // Area de estacionamiento
     public void EntrarAreaEstac(Avion av){
-         areaEstac.meter(av);//Añade el elemento
+        areaEstac.meter(av);//Añade el elemento
+        log.logEvent("el avion " + av.miId() + "ha entrado en el area de estacionamiento del aeropuerto " + av.getAeropuertoActual());
     }
     
     public void SalirAreaEstac(Avion av){
         areaEstac.sacar(av);
+        log.logEvent("el avion " + av.miId() + "ha salido del area de estacionamiento del aeropuerto " + av.getAeropuertoActual());
     }
     
     //puerta de embarque
@@ -178,10 +180,12 @@ public class Aeropuerto {
     //Area de Rodaje
     public void AvionEnAreaRodaje(Avion av){
         areaRod.meter(av);
+        log.logEvent("el avion " + av.miId() + "esta entrando en el area de rodaje del aeropuerto " + av.getAeropuertoActual());
     }
     
     public void AvionSalirAreaRod(Avion av){
         areaRod.sacar(av);
+        log.logEvent("el avion " + av.miId() + "esta saliendo del area de rodaje del aeropuerto " + av.getAeropuertoActual());
     }
     
     //pistas
@@ -191,6 +195,7 @@ public class Aeropuerto {
         }
         pista.acquire();
         pistas.meter(av);
+        log.logEvent("el avion " + av.miId() + "esta entrando en la pista del aeropuerto " + av.getAeropuertoActual() + "para despegar");
         Thread.sleep(1000 + rand.nextInt(4001));
         pista.release();
         av.despegar();
@@ -204,6 +209,7 @@ public class Aeropuerto {
         }
         pista.acquire();
         pistas.meter(av);
+        log.logEvent("el avion " + av.miId() + "esta entrando la pista del aeropuerto " + av.getAeropuertoActual() + "para aterrizar");
         pista.release();
         pistas.sacar(av);
             
@@ -277,7 +283,7 @@ public class Aeropuerto {
     //autobuses
     public void autobusEnCiudad(Autobus bus){
         busAeropuerto.sacar(bus);
-        busCiudad.meter(bus);    
+        busCiudad.meter(bus); 
     }
     
     public void autobusEnAeropuerto(Autobus bus){
@@ -299,6 +305,7 @@ public class Aeropuerto {
     public void realizarInspeccion(Avion av) throws InterruptedException{
         try{
             sInspeccion.acquire();
+            log.logEvent("el avion " +av.miId()+" esta en taller del aeropuerto de "+av.getAeropuertoActual()+ "realizando una inspeccion");
             av.inspeccionar();
             sInspeccion.release();
             avTaller.sacar(av);

@@ -12,14 +12,24 @@ import java.util.Random;
  */
 public class Autobus extends Thread{
     private String id;
+    private String aeropuertoActual;
     private int numPasajeros;
     private Aeropuerto a;
+    private Log log;
     private final Random rand = new Random();
     
-    public Autobus(int id, Aeropuerto a){ 
+    public Autobus(int id, Aeropuerto a, Log log){ 
         this.id = "B-" + crearId(id);
         this.a = a;
+        this.log = log;
+        if (esMadrid(id)){
+            aeropuertoActual = "Madrid";
+        }else{ aeropuertoActual = "Barcelona";}
+        log.logEvent(" Bus " + this.id + " es creado en el aeropuerto de " + aeropuertoActual);
         System.out.println(getMarcaTiempo()+ " Bus " + this.id + " es creado ");
+    }
+    private boolean esMadrid(int id){
+        return(id % 2 == 0);
     }
     
     private String crearId(int id){
@@ -44,12 +54,15 @@ public class Autobus extends Thread{
     
     public void entrarAeropuerto(){
         a.autobusEnAeropuerto(this);
-        
-        
+        log.logEvent(" Bus " + miId() + " ha llegado al aeropuerto de " + aeropuertoActual);
     }
+        
+        
+    
     
     public void entrarCiudad(){
         a.autobusEnCiudad(this);
+        log.logEvent(" Bus " + miId() + "ha llegado a " + aeropuertoActual);
         
     }
     @Override
@@ -90,6 +103,9 @@ public class Autobus extends Thread{
     private void rutaCiudad() throws InterruptedException{
         System.out.println(getMarcaTiempo() + " Bus " + id + " vuelve a la ciudad ");
         Thread.sleep((rand.nextInt(6) + 5) * 1000); //Tiempo del trayecto a la ciudad
+    }
+    public String getAeropuertoActual(){
+        return aeropuertoActual;
     }
     private String getMarcaTiempo(){
         return java.time.LocalTime.now().toString();

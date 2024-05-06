@@ -17,6 +17,7 @@ public class Avion extends Thread{
     private int numVuelos;
     private int numPasajeros;
     private int capacidadMaxima;
+    private Log log;
     private Aeropuerto aeropuerto;
     private Aeropuerto aeropuertoDestino;
     
@@ -25,7 +26,7 @@ public class Avion extends Thread{
     private String letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     
     
-    public Avion(int id, Aeropuerto aeropuerto, Aeropuerto aeropuertoDestino){
+    public Avion(int id, Aeropuerto aeropuerto, Aeropuerto aeropuertoDestino, Log log){
         this.aeropuerto = aeropuerto;
         this.aeropuertoDestino = aeropuertoDestino;
         if (esMadrid(id)){
@@ -33,12 +34,14 @@ public class Avion extends Thread{
         }else{
             aeropuertoActual = "Barcelona";
         }
+        this.log = log;
         char l1 = letras.charAt(rand.nextInt(letras.length()));
         char l2 = letras.charAt(rand.nextInt(letras.length()));
         this.id = "" + l1 + l2 + "-" + crearId(id);
         this.numVuelos = 0;
         this.capacidadMaxima = rand.nextInt(201) + 100;
         super.setName(String.valueOf(this.id));
+        log.logEvent(" el avión " + miId() + " es creado en el aeropuerto de " + aeropuertoActual);
         System.out.println(getMarcaTiempo()+ " Avion " + this.id + " es creado ");
         
     }
@@ -88,7 +91,8 @@ public class Avion extends Thread{
                     aeropuerto.Salir(pasajerosASubir);
                     Thread.sleep(1000 + (rand.nextInt(2001)));
                     intentos++;
-                } 
+                }
+                log.logEvent("el avion " + miId() + "esta embarcando en el aeropuerto de " + getAeropuertoActual() +" "+ numPasajeros + " personas");
             }
         }catch (InterruptedException e) {}
         System.out.println( " Avion " + id + " suben " + numPasajeros + " pasajeros");
@@ -97,6 +101,7 @@ public class Avion extends Thread{
     public void desembarcar(){
         try{
             aeropuerto.Entrar(numPasajeros);
+            log.logEvent("el avion " + miId() + "esta desembarcando en el aeropuerto de " + getAeropuertoActual() +" "+ numPasajeros + " personas");
             System.out.println( " Avion" + id + " bajan " + numPasajeros + " pasajeros");
             Thread.sleep(1000 + (rand.nextInt(2001)));
             numPasajeros = 0;
@@ -105,6 +110,7 @@ public class Avion extends Thread{
     }
     
     public void despegar() {
+        
         System.out.println("Avion " + id + " despegando...");
         try {
             sleep(rand.nextInt(4001) + 1000); // Simula el tiempo de despegue

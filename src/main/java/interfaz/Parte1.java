@@ -35,12 +35,12 @@ public class Parte1 extends javax.swing.JFrame {
         for (int i=1; i<8001; i++)
         {
             if (esPar(i)){
-                av=new Avion(i,aeroM, aeroB);
+                av=new Avion(i,aeroM, aeroB, log);
                 //bus = new Autobus(i,aeroM);
                 av.start();
                 //bus.start();
             }else{
-                av=new Avion(i,aeroB, aeroM);
+                av=new Avion(i,aeroB, aeroM, log);
                 //bus = new Autobus(i,aeroB);
                 av.start();
                 //bus.start();
@@ -50,10 +50,10 @@ public class Parte1 extends javax.swing.JFrame {
         
         for(int i = 1; i < 4001; i++){
             if(esPar(i)){
-                bus = new Autobus(i,aeroM);
+                bus = new Autobus(i,aeroM, log);
                 bus.start();
             }else{
-                bus = new Autobus(i,aeroB);
+                bus = new Autobus(i,aeroB, log);
                 bus.start();
             }
         }   

@@ -4,6 +4,13 @@
  */
 package interfaz;
 
+import com.mycompany.practica.InterfazAeropuerto;
+import java.net.MalformedURLException;
+import java.rmi.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+
 /**
  *
  * @author NoeliaUni
@@ -15,6 +22,26 @@ public class Parte2 extends javax.swing.JFrame {
      */
     public Parte2() {
         initComponents();
+    }
+    InterfazAeropuerto aer1, aer2;
+    
+    public void iniciarClientes() {
+
+        try {
+            aer1 = (InterfazAeropuerto) Naming.lookup("//localhost/objetoConecta");
+            aer2 = (InterfazAeropuerto) Naming.lookup("//localhost/objetoConecta1");
+        } catch (NotBoundException ex) {
+            Logger.getLogger(Parte2.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (MalformedURLException ex) {
+            Logger.getLogger(Parte2.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (RemoteException ex) {
+            Logger.getLogger(Parte2.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+    
+    public void iniciar(){
+        //jTextPM.setText(Integer.toString(aer1.obtenerNumAvionesHangar()));
     }
 
     /**
