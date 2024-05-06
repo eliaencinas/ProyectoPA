@@ -190,6 +190,7 @@ public class Aeropuerto {
     
     //pistas
     public void solicitarPistaDespegue(Avion av) throws InterruptedException{
+        
         while(pista.availablePermits() == 0){
             Thread.sleep(1000 + rand.nextInt(6001));
         }
