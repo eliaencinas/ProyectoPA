@@ -32,21 +32,31 @@ public class Parte1 extends javax.swing.JFrame {
         aeroviaBM = new Listas(jTextABM);
         aeroM = new Aeropuerto(log, aeroviaMB,aeroviaBM,jTextTCM,jTextTAM,jTextPasajerosM,jTextHangarM, jTextAreaEstcM, jTextPE1M, jTextPE2M, jTextPE3M, jTextPE4M, jTextPE5M, jTextPE6M, jTextARM,jTextP1M,jTextP2M, jTextP3M, jTextP4M,jTextAMB,jTextTallerM);
         aeroB = new Aeropuerto(log, aeroviaBM, aeroviaMB, jTextTCB,jTextTAB,jTextPasajerosB,jTextHangarB, jTextAreaEstcB, jTextPE1B, jTextPE2B, jTextPE3B, jTextPE4B, jTextPE5B, jTextPE6B, jTextARB, jTextP1B, jTextP2B, jTextP3B, jTextP4B, jTextABM,jTextTallerB);
-        for (int i=1; i<=100; i++)
+        for (int i=1; i<8001; i++)
         {
             if (esPar(i)){
                 av=new Avion(i,aeroM, aeroB);
-                bus = new Autobus(i,aeroM);
+                //bus = new Autobus(i,aeroM);
                 av.start();
-                bus.start();
+                //bus.start();
             }else{
                 av=new Avion(i,aeroB, aeroM);
-                bus = new Autobus(i,aeroB);
+                //bus = new Autobus(i,aeroB);
                 av.start();
-                bus.start();
+                //bus.start();
             }
             
         }
+        
+        for(int i = 1; i < 4001; i++){
+            if(esPar(i)){
+                bus = new Autobus(i,aeroM);
+                bus.start();
+            }else{
+                bus = new Autobus(i,aeroB);
+                bus.start();
+            }
+        }   
     }
     
     private boolean esPar(int num){
