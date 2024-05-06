@@ -55,14 +55,6 @@ public class Avion extends Thread{
         return id;
     }
     
-    public String ciudadOrigen(){
-        //Obtinen el último dígito del String id que será un número
-        char ultimoCaracter = id.charAt(id.length() - 1);
-        //Convierte el último caracter en un número entero
-        int ultimoDigito = Character.getNumericValue(ultimoCaracter);
-        //Verifica si el último dígito es par o impar
-        return (ultimoDigito % 2 == 0) ? "Madrid" : "Barcelona";
-    }
     
     public void embarcar(){
         int intentos = 0;
