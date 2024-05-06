@@ -10,6 +10,11 @@ import com.mycompany.practica.Avion;
 import com.mycompany.practica.HiloSuperior;
 import com.mycompany.practica.Listas;
 import com.mycompany.practica.Log;
+import com.mycompany.practica.ServidorAeropuerto;
+import java.rmi.Naming;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
 
 /**
  *
@@ -25,8 +30,9 @@ public class Parte1 extends javax.swing.JFrame {
     Listas aeroviaMB, aeroviaBM;
     Log log = new Log("evolucionAeropuerto.txt");
     HiloSuperior superior = new HiloSuperior();
-    public Parte1() {
+    public Parte1() throws RemoteException {
         initComponents();
+        
         Avion av;
         Autobus bus;
         
@@ -58,7 +64,10 @@ public class Parte1 extends javax.swing.JFrame {
                 bus = new Autobus(i,aeroB, log, superior);
                 bus.start();
             }
-        }   
+        }  
+        
+        iniciarServidorMadrid();
+        iniciarServidorBarcelona();
     }
     
     private boolean esPar(int num){
@@ -645,9 +654,32 @@ public class Parte1 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Parte1().setVisible(true);
+                try{
+                    new Parte1().setVisible(true);
+                }catch (RemoteException e){
+                    
+                }
+                
             }
         });
+    }
+    
+    public void iniciarServidorMadrid() throws RemoteException{
+        try{
+            ServidorAeropuerto obj = new ServidorAeropuerto();
+            Registry registro = LocateRegistry.createRegistry(1099);
+            Naming.rebind("//127.0.0.1/ObjetoAeropuertoM", obj);
+            obj.obtenerAeropuerto(aeroM);
+        }catch (Exception e){}
+    }
+    
+    public void iniciarServidorBarcelona() throws RemoteException{
+        try{
+            ServidorAeropuerto obj = new ServidorAeropuerto();
+            Registry registro = LocateRegistry.createRegistry(1099);
+            Naming.rebind("//127.0.0.1/ObjetoAeropuertoB", obj);
+            obj.obtenerAeropuerto(aeroM);
+        }catch (Exception e){}
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

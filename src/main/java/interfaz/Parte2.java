@@ -20,16 +20,30 @@ public class Parte2 extends javax.swing.JFrame {
     /**
      * Creates new form Parte2
      */
-    public Parte2() {
+    InterfazAeropuerto objM, objB;
+    public Parte2() throws RemoteException{
         initComponents();
+        try {
+            objM = (InterfazAeropuerto) Naming.lookup("//127.0.0.1/objetoAeropuertoM");
+            objB = (InterfazAeropuerto) Naming.lookup("//127.0.0.1/objetoAeropuertoB");
+        } catch (NotBoundException ex) {
+            Logger.getLogger(Parte2.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (MalformedURLException ex) {
+            Logger.getLogger(Parte2.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (RemoteException ex) {
+            Logger.getLogger(Parte2.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        iniciarCliente();
+        iniciar();
+        
     }
-    InterfazAeropuerto aer1, aer2;
     
-    public void iniciarClientes() {
+    
+    private void iniciarCliente() {
 
         try {
-            aer1 = (InterfazAeropuerto) Naming.lookup("//localhost/objetoConecta");
-            aer2 = (InterfazAeropuerto) Naming.lookup("//localhost/objetoConecta1");
+            objM = (InterfazAeropuerto) Naming.lookup("//127.0.0.1/ObjetoAeropuertoM");
+            objB = (InterfazAeropuerto) Naming.lookup("//127.0.0.1/ObjetoAeropuertoB");
         } catch (NotBoundException ex) {
             Logger.getLogger(Parte2.class.getName()).log(Level.SEVERE, null, ex);
         } catch (MalformedURLException ex) {
@@ -40,8 +54,27 @@ public class Parte2 extends javax.swing.JFrame {
 
     }
     
-    public void iniciar(){
-        //jTextPM.setText(Integer.toString(aer1.obtenerNumAvionesHangar()));
+    private void iniciar(){
+        try{
+            jTextPM.setText(Integer.toString(objM.obtenerNumPasajeros()));
+            jTextHM.setText(Integer.toString(objM.obtenerNumAvionesHangar()));
+            jTextTM.setText(Integer.toString(objM.obtenerNumAvionesTaller()));
+            jTextAEM.setText(Integer.toString(objM.obtenerNumAvionesAreaEst()));
+            jTextARM.setText(Integer.toString(objM.obtenerNumAvionesAreaRod()));
+            jTextPB.setText(Integer.toString(objM.obtenerNumPasajeros()));
+            jTextHB.setText(Integer.toString(objM.obtenerNumAvionesHangar()));
+            jTextTB.setText(Integer.toString(objM.obtenerNumAvionesTaller()));
+            jTextAEB.setText(Integer.toString(objM.obtenerNumAvionesAreaEst()));
+            jTextARB.setText(Integer.toString(objM.obtenerNumAvionesAreaRod()));
+            jTextAeroviaMB.setText(objM.obtenerColaAvionesAerovia().imprime());
+            jTextAeroviaBM.setText(objB.obtenerColaAvionesAerovia().imprime());
+            
+            
+        }catch (Exception e){
+            System.out.println("Excepción : " + e.getMessage());
+            e.printStackTrace();
+        }
+        
     }
 
     /**
@@ -145,52 +178,138 @@ public class Parte2 extends javax.swing.JFrame {
         jLabel13.setText("Pista 1:");
 
         jButtonCerrarP1M.setText("Cerrar");
+        jButtonCerrarP1M.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCerrarP1MActionPerformed(evt);
+            }
+        });
 
         jButtonAbrirP1M.setText("Abrir");
+        jButtonAbrirP1M.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAbrirP1MActionPerformed(evt);
+            }
+        });
 
         jLabel14.setText("Pista 2:");
 
         jButtonCerrarP2M.setText("Cerrar");
+        jButtonCerrarP2M.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCerrarP2MActionPerformed(evt);
+            }
+        });
 
         jButtonAbrirP2M.setText("Abrir");
+        jButtonAbrirP2M.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAbrirP2MActionPerformed(evt);
+            }
+        });
 
         jLabel15.setText("Pista 3:");
 
         jButtonCerrarP3M.setText("Cerrar");
+        jButtonCerrarP3M.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCerrarP3MActionPerformed(evt);
+            }
+        });
 
         jButtonAbrirP3M.setText("Abrir");
+        jButtonAbrirP3M.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAbrirP3MActionPerformed(evt);
+            }
+        });
 
         jLabel16.setText("Pista 4:");
 
         jButtonCerrarP4M.setText("Cerrar");
+        jButtonCerrarP4M.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCerrarP4MActionPerformed(evt);
+            }
+        });
 
         jButtonAbrirP4M.setText("Abrir");
+        jButtonAbrirP4M.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAbrirP4MActionPerformed(evt);
+            }
+        });
 
         jLabel17.setText("Pista 4:");
 
         jButtonCerrarP4B.setText("Cerrar");
+        jButtonCerrarP4B.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCerrarP4BActionPerformed(evt);
+            }
+        });
 
         jButtonAbrirP4B.setText("Abrir");
+        jButtonAbrirP4B.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAbrirP4BActionPerformed(evt);
+            }
+        });
 
         jLabel18.setText("Pista 1:");
 
         jButtonCerrarP1B.setText("Cerrar");
+        jButtonCerrarP1B.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCerrarP1BActionPerformed(evt);
+            }
+        });
 
         jButtonAbrirP1B.setText("Abrir");
+        jButtonAbrirP1B.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAbrirP1BActionPerformed(evt);
+            }
+        });
 
         jLabel19.setText("Pista 2:");
 
         jButtonCerrarP2B.setText("Cerrar");
+        jButtonCerrarP2B.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCerrarP2BActionPerformed(evt);
+            }
+        });
 
         jButtonAbrirP2B.setText("Abrir");
+        jButtonAbrirP2B.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAbrirP2BActionPerformed(evt);
+            }
+        });
 
         jLabel20.setText("Pista 3:");
 
         jButtonCerrarP3B.setText("Cerrar");
+        jButtonCerrarP3B.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCerrarP3BActionPerformed(evt);
+            }
+        });
 
         jButtonAbrirP3B.setText("Abrir");
+        jButtonAbrirP3B.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAbrirP3BActionPerformed(evt);
+            }
+        });
 
         jLabel21.setText("Aerovia Madrid-Barcelona");
+
+        jTextAeroviaMB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextAeroviaMBActionPerformed(evt);
+            }
+        });
 
         jLabel22.setText("Aerovia Barcelona-Madrid");
 
@@ -443,6 +562,123 @@ public class Parte2 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextPMActionPerformed
 
+    private void jTextAeroviaMBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextAeroviaMBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextAeroviaMBActionPerformed
+
+    private void jButtonCerrarP1MActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCerrarP1MActionPerformed
+        try{
+            int pista = 1;
+            objM.cerrarPista(pista);
+        }catch (RemoteException e){}
+    }//GEN-LAST:event_jButtonCerrarP1MActionPerformed
+
+    private void jButtonCerrarP2MActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCerrarP2MActionPerformed
+        try{
+            int pista = 2;
+            objM.cerrarPista(pista);
+        }catch (RemoteException e){}
+    }//GEN-LAST:event_jButtonCerrarP2MActionPerformed
+
+    private void jButtonCerrarP3MActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCerrarP3MActionPerformed
+        try{
+            int pista = 3;
+            objM.cerrarPista(pista);
+        }catch (RemoteException e){}
+    }//GEN-LAST:event_jButtonCerrarP3MActionPerformed
+
+    private void jButtonCerrarP4MActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCerrarP4MActionPerformed
+        try{
+            int pista = 4;
+            objM.cerrarPista(pista);
+        }catch (RemoteException e){}
+    }//GEN-LAST:event_jButtonCerrarP4MActionPerformed
+
+    private void jButtonAbrirP1MActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAbrirP1MActionPerformed
+        try{
+            int pista = 1 ;
+            objM.abrirPista(pista);
+        }catch (RemoteException e){}
+        
+    }//GEN-LAST:event_jButtonAbrirP1MActionPerformed
+
+    private void jButtonAbrirP2MActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAbrirP2MActionPerformed
+        try{
+            int pista = 2 ;
+            objM.abrirPista(pista);
+        }catch (RemoteException e){}
+    }//GEN-LAST:event_jButtonAbrirP2MActionPerformed
+
+    private void jButtonAbrirP3MActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAbrirP3MActionPerformed
+       try{
+            int pista = 3 ;
+            objM.abrirPista(pista);
+        }catch (RemoteException e){}
+    }//GEN-LAST:event_jButtonAbrirP3MActionPerformed
+
+    private void jButtonAbrirP4MActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAbrirP4MActionPerformed
+        try{
+            int pista = 4 ;
+            objM.abrirPista(pista);
+        }catch (RemoteException e){}
+    }//GEN-LAST:event_jButtonAbrirP4MActionPerformed
+
+    private void jButtonCerrarP1BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCerrarP1BActionPerformed
+        try{
+            int pista = 1;
+            objB.cerrarPista(pista);
+        }catch (RemoteException e){}
+    }//GEN-LAST:event_jButtonCerrarP1BActionPerformed
+
+    private void jButtonCerrarP2BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCerrarP2BActionPerformed
+        try{
+            int pista = 2;
+            objB.cerrarPista(pista);
+        }catch (RemoteException e){}
+    }//GEN-LAST:event_jButtonCerrarP2BActionPerformed
+
+    private void jButtonCerrarP3BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCerrarP3BActionPerformed
+        try{
+            int pista = 3;
+            objB.cerrarPista(pista);
+        }catch (RemoteException e){}
+    }//GEN-LAST:event_jButtonCerrarP3BActionPerformed
+
+    private void jButtonCerrarP4BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCerrarP4BActionPerformed
+        try{
+            int pista = 4;
+            objB.cerrarPista(pista);
+        }catch (RemoteException e){}
+    }//GEN-LAST:event_jButtonCerrarP4BActionPerformed
+
+    private void jButtonAbrirP1BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAbrirP1BActionPerformed
+        try{
+            int pista = 1 ;
+            objB.abrirPista(pista);
+        }catch (RemoteException e){}
+    }//GEN-LAST:event_jButtonAbrirP1BActionPerformed
+
+    private void jButtonAbrirP2BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAbrirP2BActionPerformed
+        try{
+            int pista = 1 ;
+            objB.abrirPista(pista);
+        }catch (RemoteException e){}
+    }//GEN-LAST:event_jButtonAbrirP2BActionPerformed
+
+    private void jButtonAbrirP3BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAbrirP3BActionPerformed
+        try{
+            int pista = 1 ;
+            objB.abrirPista(pista);
+        }catch (RemoteException e){}
+    }//GEN-LAST:event_jButtonAbrirP3BActionPerformed
+
+    private void jButtonAbrirP4BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAbrirP4BActionPerformed
+        try{
+            int pista = 1 ;
+            objB.abrirPista(pista);
+        }catch (RemoteException e){}
+    }//GEN-LAST:event_jButtonAbrirP4BActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -473,7 +709,10 @@ public class Parte2 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Parte2().setVisible(true);
+                try{
+                    new Parte2().setVisible(true);
+                }catch (Exception e){}
+                
             }
         });
     }

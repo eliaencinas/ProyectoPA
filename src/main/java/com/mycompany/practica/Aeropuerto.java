@@ -216,6 +216,10 @@ public class Aeropuerto {
             
     }
     
+    public ListasPistas getPista(){
+        return pistas;
+    }
+    
     
     /*public int obtenerPista(Avion av){
         if(mirarSiParar()){

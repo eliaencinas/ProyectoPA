@@ -46,27 +46,7 @@ public class ListasPistas {
         imprimir();
     }
     
-    public synchronized boolean estaOcupada(int numPista, Avion av){
-        boolean ocupada = false;
-        for(int i = 0; i < lista.size(); i++){
-            if(i == 0 && lista.contains(av)){
-                numPista = 1;
-                ocupada = true;
-            } else if( i == 1 && lista.contains(av)){
-                numPista = 2;
-                ocupada = true;
-            } else if( i == 2 && lista.contains(av)){
-                numPista = 3;
-                ocupada = true;
-            } else if(i == 3 && lista.contains(av)){
-                numPista = 4;
-                ocupada = true;
-            }else{
-                ocupada = false;
-            }
-        }
-        return ocupada;
-    }
+
     public synchronized void cerrada(int numPista){
 
         for(int i = 0; i < lista.size(); i++){

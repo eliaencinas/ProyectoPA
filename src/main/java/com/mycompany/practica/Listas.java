@@ -42,7 +42,17 @@ public class Listas {
         tf.setText(contenido);
     }
     
-    public int longitud(){
+    public String imprime(){
+        String contenido = "";
+        for (int i = 0; i<lista.size(); i++) {
+            if (lista.get(i) instanceof Avion) {
+                contenido += "Avion: " + ((Avion) lista.get(i)).miId() + " ";
+            } 
+        }
+        return contenido;
+    }
+    
+    public synchronized int longitud(){
        return lista.size();
     }
 }
