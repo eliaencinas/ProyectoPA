@@ -44,14 +44,10 @@ public class Parte1 extends javax.swing.JFrame {
         {
             if (esPar(i)){
                 av=new Avion(i,aeroM, aeroB, log, superior);
-                //bus = new Autobus(i,aeroM);
                 av.start();
-                //bus.start();
             }else{
                 av=new Avion(i,aeroB, aeroM, log, superior);
-                //bus = new Autobus(i,aeroB);
                 av.start();
-                //bus.start();
             }
             
         }
@@ -611,15 +607,11 @@ public class Parte1 extends javax.swing.JFrame {
 
     private void bttPararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttPararActionPerformed
         // TODO add your handling code here:
-        //aeroM.detener();
-        //aeroB.detener();
         superior.detener();
     }//GEN-LAST:event_bttPararActionPerformed
 
     private void bttSeguirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttSeguirActionPerformed
         // TODO add your handling code here:
-        /*aeroM.continuar();
-        aeroB.continuar();*/
         superior.reanudar();
     }//GEN-LAST:event_bttSeguirActionPerformed
 

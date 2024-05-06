@@ -8,17 +8,18 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 
 /**
- *
- * @author NoeliaUni
+ * Interfaz remota para el aeropuerto.
+ * @author Noelia y Elia
  */
 public interface InterfazAeropuerto extends Remote {
-    void obtenerAeropuerto(Aeropuerto aeropuerto) throws RemoteException;
-    int obtenerNumPasajeros() throws RemoteException;
-    int obtenerNumAvionesHangar() throws RemoteException;
-    int obtenerNumAvionesTaller() throws RemoteException;
-    int obtenerNumAvionesAreaEst() throws RemoteException;
-    int obtenerNumAvionesAreaRod() throws RemoteException;
-    Listas obtenerColaAvionesAerovia() throws RemoteException;
-    void cerrarPista( int numPista) throws RemoteException;
-    void abrirPista( int numPista) throws RemoteException;
+    
+    void obtenerAeropuerto(Aeropuerto aeropuerto) throws RemoteException;   // Método para obtener una referencia al objeto Aeropuerto.
+    int obtenerNumPasajeros() throws RemoteException; // Método para obtener el número de pasajeros en el aeropuerto.
+    int obtenerNumAvionesHangar() throws RemoteException; // Método para obtener el número de aviones en el hangar del aeropuerto.
+    int obtenerNumAvionesTaller() throws RemoteException;     // Método para obtener el número de aviones en el taller del aeropuerto.
+    int obtenerNumAvionesAreaEst() throws RemoteException;     // Método para obtener el número de aviones en el área de estacionamiento del aeropuerto.
+    int obtenerNumAvionesAreaRod() throws RemoteException; // Método para obtener el número de aviones en el área de rodaje del aeropuerto.
+    Listas obtenerColaAvionesAerovia() throws RemoteException;     // Método para obtener la lista de aviones en la aerovía del aeropuerto.
+    void cerrarPista( int numPista) throws RemoteException; // Método para cerrar una pista específica del aeropuerto.
+    void abrirPista( int numPista) throws RemoteException; // Método para abrir una pista específica del aeropuerto.
 }
