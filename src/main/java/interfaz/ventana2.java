@@ -7,6 +7,7 @@ package interfaz;
 import com.mycompany.practica.Aeropuerto;
 import com.mycompany.practica.Autobus;
 import com.mycompany.practica.Avion;
+import com.mycompany.practica.Listas;
 
 /**
  *
@@ -19,21 +20,25 @@ public class ventana2 extends javax.swing.JFrame {
      */
     Aeropuerto aeroM;
     Aeropuerto aeroB;
+    Listas aeroviaMB, aeroviaBM;
     public ventana2() {
         initComponents();
         Avion av;
         Autobus bus;
-        aeroM = new Aeropuerto(aeroB,jTextTCM,jTextTAM,jTextPasajerosM,jTextHangarM, jTextAreaEstcM, jTextPE1M, jTextPE2M, jTextPE3M, jTextPE4M, jTextPE5M, jTextPE6M, jTextARM,jTextP1M,jTextP2M, jTextP3M, jTextP4M,jTextAMB,jTextTallerM);
-        aeroB = new Aeropuerto(aeroM,jTextTCB,jTextTAB,jTextPasajerosB,jTextHangarB, jTextAreaEstcB, jTextPE1B, jTextPE2B, jTextPE3B, jTextPE4B, jTextPE5B, jTextPE6B, jTextARB, jTextP1B, jTextP2B, jTextP3B, jTextP4B, jTextABM,jTextTallerB);
+        
+        aeroviaMB = new Listas(jTextAMB);
+        aeroviaBM = new Listas(jTextABM);
+        aeroM = new Aeropuerto(aeroviaMB,aeroviaBM,jTextTCM,jTextTAM,jTextPasajerosM,jTextHangarM, jTextAreaEstcM, jTextPE1M, jTextPE2M, jTextPE3M, jTextPE4M, jTextPE5M, jTextPE6M, jTextARM,jTextP1M,jTextP2M, jTextP3M, jTextP4M,jTextAMB,jTextTallerM);
+        aeroB = new Aeropuerto(aeroviaBM, aeroviaMB, jTextTCB,jTextTAB,jTextPasajerosB,jTextHangarB, jTextAreaEstcB, jTextPE1B, jTextPE2B, jTextPE3B, jTextPE4B, jTextPE5B, jTextPE6B, jTextARB, jTextP1B, jTextP2B, jTextP3B, jTextP4B, jTextABM,jTextTallerB);
         for (int i=1; i<=100; i++)
         {
             if (esPar(i)){
-                av=new Avion(i,aeroM);
+                av=new Avion(i,aeroM, aeroB);
                 bus = new Autobus(i,aeroM);
                 av.start();
                 bus.start();
             }else{
-                av=new Avion(i,aeroB);
+                av=new Avion(i,aeroB, aeroM);
                 bus = new Autobus(i,aeroB);
                 av.start();
                 bus.start();

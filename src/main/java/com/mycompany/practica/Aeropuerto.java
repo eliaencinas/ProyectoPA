@@ -25,8 +25,6 @@ public class Aeropuerto {
     private int numPersonas;
     JTextField nP;
     private boolean parar = false;
-    private boolean esMadrid;
-    private Aeropuerto otroAeropuerto;
     //Random 
     Random rand = new Random();
     // Listas
@@ -50,16 +48,10 @@ public class Aeropuerto {
     
     
     
-    public Aeropuerto(boolean esMadrid, Listas aeroviaMB, Listas aeroviaBM, Aeropuerto aeropuerto2,JTextField bC, JTextField bA,JTextField numP,JTextField h, JTextField ArEst, JTextField pt1, JTextField pt2, JTextField pt3, JTextField pt4, JTextField pt5, JTextField pt6, JTextField areaR, JTextField pista1, JTextField pista2, JTextField pista3, JTextField pista4, JTextField aero,JTextField taller){
-        this.otroAeropuerto = aeropuerto2;
-        this.esMadrid = esMadrid;
-        if (esMadrid){
-            this.aeroviaADestino = aeroviaMB;
-            this.aeroviaAMi = aeroviaBM;
-        }else{ 
-            this.aeroviaADestino = aeroviaBM;
-            this.aeroviaAMi = aeroviaMB;    
-        }
+    public Aeropuerto( Listas aeroviaDest, Listas aeroviaAMi,JTextField bC, JTextField bA,JTextField numP,JTextField h, JTextField ArEst, JTextField pt1, JTextField pt2, JTextField pt3, JTextField pt4, JTextField pt5, JTextField pt6, JTextField areaR, JTextField pista1, JTextField pista2, JTextField pista3, JTextField pista4, JTextField aero,JTextField taller){
+        this.aeroviaADestino = aeroviaDest;
+        this.aeroviaAMi = aeroviaAMi;
+        
         nP = numP;
         numPersonas = 0;
         avionesHangar = new Listas(h);
@@ -296,17 +288,18 @@ public class Aeropuerto {
                 Thread.currentThread().interrupt();
             }
         }else{
-            if(pista.availablePermits() == 0){
+            while(pista.availablePermits() == 0){
                 Thread.sleep(1000 + rand.nextInt(6001));
-            }else{
-                pista.acquire();
-                pistas.meter(av);
-                Thread.sleep(1000 + rand.nextInt(4001));
-                pista.release();
-                av.despegar();
-                
-                pistas.sacar(av);
             }
+
+            pista.acquire();
+            pistas.meter(av);
+            Thread.sleep(1000 + rand.nextInt(4001));
+            pista.release();
+            av.despegar();
+                
+            pistas.sacar(av);
+            
             
         }
     }
@@ -320,14 +313,14 @@ public class Aeropuerto {
                 Thread.currentThread().interrupt();
             }
         }else{
-            if(pista.availablePermits() == 0){
+            while(pista.availablePermits() == 0){
                 Thread.sleep(1000 + rand.nextInt(6001));
-            }else{
-                pista.acquire();
-                pistas.meter(av);
-                pista.release();
-                pistas.sacar(av);
             }
+            pista.acquire();
+            pistas.meter(av);
+            pista.release();
+            pistas.sacar(av);
+            
         }
     }
     
@@ -387,6 +380,7 @@ public class Aeropuerto {
             parada.await();
         }else{
             aeroviaAMi.meter(av);
+            Thread.sleep((rand.nextInt(16) + 15) *1000);
         }
     }
     
@@ -509,9 +503,9 @@ public class Aeropuerto {
         return avTaller.longitud();
     }
 
-   /* public Listas getAerovia() {
-        return aerovia;
-    }*/
+    public Listas getAerovia() {
+        return aeroviaADestino;
+    }
     
     
 }

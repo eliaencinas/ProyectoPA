@@ -42,10 +42,10 @@ public class ServidorAeropuerto extends UnicastRemoteObject implements InterfazA
         return aeropuerto.numAVionesAreaRod();
     }
 
-    /*@Override
+    @Override
     public Listas obtenerColaAvionesAerovia(Aeropuerto aeropuerto) throws RemoteException {
         return aeropuerto.getAerovia();
-    }*/
+    }
 
     @Override
     public void cerrarPista(Aeropuerto aeropuerto, int numPista) throws RemoteException {

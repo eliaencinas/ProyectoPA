@@ -17,15 +17,18 @@ public class Avion extends Thread{
     private int numVuelos;
     private int numPasajeros;
     private int capacidadMaxima;
+    private boolean enEst;
     private Aeropuerto aeropuerto;
+    private Aeropuerto aeropuertoDestino;
     
     //private int pos;
     private Random rand = new Random();
     private String letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     
     
-    public Avion(int id, Aeropuerto aeropuerto){
+    public Avion(int id, Aeropuerto aeropuerto, Aeropuerto aeropuertoDestino){
         this.aeropuerto = aeropuerto;
+        this.aeropuertoDestino = aeropuertoDestino;
         char l1 = letras.charAt(rand.nextInt(letras.length()));
         char l2 = letras.charAt(rand.nextInt(letras.length()));
         this.id = "" + l1 + l2 + "-" + crearId(id);
@@ -114,17 +117,25 @@ public class Avion extends Thread{
     
     public void run(){
        try{
+            aeropuerto.AvionEnHangar(this);
+            sleep(1000);
+            aeropuerto.AvionSalirHangar(this);
+            aeropuerto.EntrarAreaEstac(this);
            while(true){
-             recorrerAeropuertoOrigen();
-             aeropuerto.meterAeroviaADestino(this);
-             numVuelos ++;
-             recorrerAeropuertoDestino();
-             aeropuerto.solicitarTaller(this);
-             if(debeIrHangar()){
-                 sleep(15000 + rand.nextInt(31001));
-             }else{
-                 aeropuerto.EntrarAreaEstac(this);
-             }
+                recorrerAeropuertoOrigen();
+                aeropuerto.meterAeroviaADestino(this);
+                numVuelos ++;
+                recorrerAeropuertoDestino();
+                aeropuertoDestino.solicitarTaller(this);
+                if(debeIrHangar()){
+                    aeropuertoDestino.AvionEnHangar(this);
+                    sleep(15000 + rand.nextInt(15001));
+                    aeropuertoDestino.AvionSalirHangar(this);
+                    aeropuertoDestino.EntrarAreaEstac(this);
+                }else{
+                    aeropuerto.EntrarAreaEstac(this);
+                }
+                continuarAeropuertoDestino();
            }
            
            
@@ -158,10 +169,6 @@ public class Avion extends Thread{
     }
     
     public void recorrerAeropuertoOrigen() throws InterruptedException{
-        aeropuerto.AvionEnHangar(this);
-        sleep(1000);
-        aeropuerto.AvionSalirHangar(this);
-        aeropuerto.EntrarAreaEstac(this);
         sleep(1000);
         aeropuerto.SalirAreaEstac(this);
         aeropuerto.solicitarPuertaEmbarque(this);
@@ -175,13 +182,45 @@ public class Avion extends Thread{
     }
     
     public void recorrerAeropuertoDestino() throws InterruptedException{
+        aeropuerto.salirAeroviaDestino(this);
+        aeropuertoDestino.solicitarPistaAterrizaje(this);
+        aeropuertoDestino.AvionEnAreaRodaje(this);
+        sleep(3000 + rand.nextInt(6001));
+        aeropuertoDestino.AvionSalirAreaRod(this);
+        aeropuertoDestino.solicitarPuertaDesembarque(this);
+        aeropuertoDestino.EntrarAreaEstac(this);
+        sleep(1000 + rand.nextInt(4001));
+    }
+    
+    public void continuarAeropuertoDestino() throws InterruptedException{
+        aeropuertoDestino.solicitarPuertaEmbarque(this);
+        sleep(800);
+        aeropuertoDestino.actualizarNumPersonas();
+        aeropuertoDestino.AvionEnAreaRodaje(this);
+        sleep(1000 +(rand.nextInt(4001)));
+        aeropuertoDestino.AvionSalirAreaRod(this);
+        sleep(1000+(rand.nextInt(2001)));
+        aeropuertoDestino.solicitarPistaDespegue(this);
+        aeropuertoDestino.meterAeroviaADestino(this);
+        aeropuertoDestino.salirAeroviaDestino(this);
         aeropuerto.solicitarPistaAterrizaje(this);
         aeropuerto.AvionEnAreaRodaje(this);
         sleep(3000 + rand.nextInt(6001));
         aeropuerto.AvionSalirAreaRod(this);
         aeropuerto.solicitarPuertaDesembarque(this);
         aeropuerto.EntrarAreaEstac(this);
-        sleep(1000 + rand.nextInt(6001));
+        sleep(1000 + rand.nextInt(4001));
+        aeropuerto.solicitarTaller(this);
+        if(debeIrHangar()){
+            aeropuertoDestino.AvionEnHangar(this);
+            sleep(15000 + rand.nextInt(15001));
+            aeropuertoDestino.AvionSalirHangar(this);
+            aeropuertoDestino.EntrarAreaEstac(this);
+                 
+        }else{
+            aeropuerto.EntrarAreaEstac(this);
+        }
+        
     }
     
     public boolean debeIrHangar(){
