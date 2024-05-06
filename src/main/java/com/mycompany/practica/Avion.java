@@ -231,6 +231,7 @@ public class Avion extends Thread{
         superior.esperar();
         aeropuertoDestino.EntrarAreaEstac(this);
         sleep(1000 + rand.nextInt(4001));
+        aeropuerto.solicitarTaller(this);
     }
     
     public void continuarAeropuertoDestino() throws InterruptedException{
@@ -271,7 +272,7 @@ public class Avion extends Thread{
         superior.esperar();
         sleep(1000 + rand.nextInt(4001));
         superior.esperar();
-        //aeropuerto.solicitarTaller(this);
+        aeropuerto.solicitarTaller(this);
         if(debeIrHangar()){
             aeropuertoDestino.AvionEnHangar(this);
             superior.esperar();
